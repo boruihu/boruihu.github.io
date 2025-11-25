@@ -142,6 +142,14 @@
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
   </nav>
 </div>
 
@@ -183,7 +191,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/11/25/Welcome/" class="post-title-link" itemprop="url">Welcome to My Blog</a>
+          <a href="/2025/11/25/Welcome/" class="post-title-link" itemprop="url">Sturm–Liouville 定理笔记</a>
         </h2>
 
         <div class="post-meta-container">
@@ -195,7 +203,20 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-11-25 15:10:00 / Modified: 15:14:08" itemprop="dateCreated datePublished" datetime="2025-11-25T15:10:00+08:00">2025-11-25</time>
+      <time title="Created: 2025-11-25 15:30:00 / Modified: 15:25:03" itemprop="dateCreated datePublished" datetime="2025-11-25T15:30:00+08:00">2025-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Mathematics/Analysis/" itemprop="url" rel="index"><span itemprop="name">Analysis</span></a>
+        </span>
     </span>
 
   
@@ -208,8 +229,86 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Hello! </p>
-
+          <h2 id="Sturm–Liouville-定理"><a href="#Sturm–Liouville-定理" class="headerlink" title="Sturm–Liouville 定理"></a>Sturm–Liouville 定理</h2><p>沿用上一节的一些约定。</p>
+<p>我们考虑一个二阶非齐次线性微分方程：</p>
+<script type="math/tex; mode=display">
+y'' + p(x)y' + q(x)y = f(x),</script><p>一个自然的思路是类比线性代数和 Fourier 分析。若将左侧视作作用在 $y$ 上的线性算子，我们希望通过研究此算子的特征值—特征函数结构，把 $f$ 展开为函数项级数。</p>
+<p>为了获得良好的谱结构，需要把方程化为 Sturm–Liouville 形式。事实上，总可以将方程化成：</p>
+<script type="math/tex; mode=display">
+\frac{d}{dx}\Big( e^{\int p(x) \, dx}\, y'(x) \Big)
+  + q(x)\, e^{\int p(x) dx}\, y(x)
+  = f(x)\, e^{\int p(x) dx}.</script><hr>
+<h3 id="定义与命题-1"><a href="#定义与命题-1" class="headerlink" title="定义与命题 1"></a><strong>定义与命题 1</strong></h3><p>给定区间 $J=[a,b]$ 上连续函数 $a(x), b(x)$（假设 $a(x)&gt;0$），定义 Sturm–Liouville 算子为：</p>
+<script type="math/tex; mode=display">
+\mathcal L y := \frac{d}{dx}\left( a(x)\, y'(x) \right) + b(x)\, y(x).</script><p>配合边界条件指定其定义域后，$\mathcal L$ 是一个线性算子。</p>
+<hr>
+<p>我们研究以下特征值问题：给定正函数 $\rho(x)&gt;0$，求哪些 $\lambda\in\mathbb C$ 使得</p>
+<script type="math/tex; mode=display">
+\mathcal L y(x) + \lambda \rho(x) y(x) = 0,</script><p>具有非零解，并满足齐次边界条件</p>
+<script type="math/tex; mode=display">
+\alpha_1 y(a) + \beta_1 y'(a)=0, \qquad
+\alpha_2 y(b) + \beta_2 y'(b)=0,</script><p>其中 $(\alpha_i,\beta_i)\ne (0,0)$。</p>
+<p>这样的 $\lambda$ 称为 <strong>特征值</strong>，对应的非零解称为 <strong>特征函数</strong>。</p>
+<p>下面给出 Sturm–Liouville 特征值问题的主要定理，其中蓝色部分在本节证明。</p>
+<hr>
+<h2 id="定理-2"><a href="#定理-2" class="headerlink" title="定理 2"></a><strong>定理 2</strong></h2><p>对于 Sturm–Liouville 特征值问题，有：</p>
+<ol>
+<li><p><strong>$\color{blue}{\text{特征值均为实数}}$</strong>，且可按  </p>
+<script type="math/tex; mode=display">
+\lambda_1 < \lambda_2 < \cdots</script><p>排序，且 $\lambda_n\to\infty$。</p>
+</li>
+<li><p><strong>$\color{blue}{\text{每个特征值的特征函数空间是一维的}}$</strong>。特征函数可取实值，且第 $n$ 个特征函数 $\phi_n$ 在区间 $J$ 中有 $n-1$ 个零点。</p>
+</li>
+<li><p><strong>$\color{blue}{\text{不同特征值对应的特征函数在权函数 }\rho(x)\text{ 下正交}}$</strong>：</p>
+<script type="math/tex; mode=display">
+\langle f,g\rangle=\int_a^b f(x)g(x)\rho(x)\,dx,</script><p>则</p>
+<script type="math/tex; mode=display">
+\langle \phi_n,\phi_m\rangle=\langle\phi_n,\phi_n\rangle \delta_{nm}.</script></li>
+<li><p>特征函数系在 $L^2_\rho(a,b)$ 中完备：  </p>
+<script type="math/tex; mode=display">
+f(x)\sim \sum_{n=1}^\infty c_n \phi_n(x),\qquad
+c_n=\frac{\langle f,\phi_n\rangle}{\langle\phi_n,\phi_n\rangle}.</script></li>
+<li><p>若 $b(x)&gt;0$，则所有特征值均为正。</p>
+</li>
+</ol>
+<hr>
+<h2 id="引理-3（Lagrange-恒等式）"><a href="#引理-3（Lagrange-恒等式）" class="headerlink" title="引理 3（Lagrange 恒等式）"></a>引理 3（Lagrange 恒等式）</h2><script type="math/tex; mode=display">
+u\mathcal L v - v\mathcal L u = \big[\, a(x)(u v' - v u')\,\big]' .</script><p><strong>证明略。</strong></p>
+<hr>
+<h2 id="定理-2-1’：特征值均为实数"><a href="#定理-2-1’：特征值均为实数" class="headerlink" title="定理 2.1’：特征值均为实数"></a>定理 2.1’：特征值均为实数</h2><p>设</p>
+<script type="math/tex; mode=display">
+\mathcal L\phi_n = -\lambda_n\rho\phi_n,\qquad
+\mathcal L\overline{\phi_n} = -\overline{\lambda_n}\rho\,\overline{\phi_n}.</script><p>将第一式乘以 $\overline\phi_n$，第二式乘以 $\phi_n$，相减得</p>
+<script type="math/tex; mode=display">
+\overline{\phi_n}\mathcal L\phi_n - 
+\phi_n\mathcal L\overline{\phi_n}=
+(\overline{\lambda_n}-\lambda_n)\rho|\phi_n|^2.</script><p>对 $[t,r]$ 积分并应用 Lagrange 恒等式得</p>
+<script type="math/tex; mode=display">
+\big[a(\overline\phi_n\phi_n'-\phi_n\overline\phi_n')\big]_{t}^{r}
+=
+(\overline{\lambda_n}-\lambda_n)\int_t^r \rho|\phi_n|^2 dx.</script><p>边界项因齐次边界条件为零，因此</p>
+<script type="math/tex; mode=display">
+0=(\overline{\lambda_n}-\lambda_n)\int_t^r \rho|\phi_n|^2 dx.</script><p>积分为正，因此  </p>
+<script type="math/tex; mode=display">
+\overline{\lambda_n}=\lambda_n.</script><hr>
+<h2 id="定理-2-2’：每个特征值的一维性"><a href="#定理-2-2’：每个特征值的一维性" class="headerlink" title="定理 2.2’：每个特征值的一维性"></a>定理 2.2’：每个特征值的一维性</h2><p>特征函数满足相同齐次边界条件。若有两个线性无关解，则其 Wronskian</p>
+<script type="math/tex; mode=display">
+W(x)=\phi_1\phi_2'-\phi_1'\phi_2</script><p>在 $x=a$ 处因边界条件同时满足而为 0。</p>
+<p>由 Lagrange 恒等式可知 $(aW)’=0$，故 $W(x)\equiv 0$，两解线性相关。</p>
+<hr>
+<h2 id="定理-2-3’：特征函数的正交性"><a href="#定理-2-3’：特征函数的正交性" class="headerlink" title="定理 2.3’：特征函数的正交性"></a>定理 2.3’：特征函数的正交性</h2><p>设</p>
+<script type="math/tex; mode=display">
+\mathcal L\phi_n=-\lambda_n\rho\phi_n,\qquad
+\mathcal L\phi_m=-\lambda_m\rho\phi_m,\quad 
+\lambda_m\ne\lambda_n.</script><p>将第一式乘以 $\phi_m$，第二式乘以 $\phi_n$，相减得</p>
+<script type="math/tex; mode=display">
+\phi_m\mathcal L\phi_n - \phi_n\mathcal L\phi_m
+= (\lambda_m-\lambda_n)\rho\phi_n\phi_m.</script><p>积分并应用边界条件使边界项为 0，于是</p>
+<script type="math/tex; mode=display">
+(\lambda_m-\lambda_n)
+\int_a^b \rho\phi_n\phi_m\,dx=0.</script><p>因 $\lambda_m\ne\lambda_n$，故</p>
+<script type="math/tex; mode=display">
+\int_a^b \rho\phi_n\phi_m\,dx=0.</script>
       
     </div>
 
