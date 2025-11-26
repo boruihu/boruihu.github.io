@@ -1222,7 +1222,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #4f63ff;
+    background: #d6cf25;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2700,4 +2700,45 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+/* ============================================================
+   ǿ�����帲�� (��� NexT ����)
+   ============================================================ */
+/* 1. ����ȫ�ֺ��������� */
+body,
+.post-body,
+.post-body p,
+.post-body span,
+.post-body li {
+  font-family: Georgia, "Times New Roman", serif !important; /* ������Ը����� */
+  font-size: 17px !important; /* �ֺŴ�һ��źÿ� */
+  line-height: 1.7 !important; /* �м������ */
+  color: #222 !important; /* ����֣������� */
+}
+/* 2. �������б��� (h1-h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.post-body h1,
+.post-body h2 {
+  font-family: Georgia, serif !important;
+  font-weight: bold !important;
+  color: #000 !important;
+}
+/* 3. ���ִ����Ϊ�ȿ����� (ǧ����ɳ����壬����û����) */
+code,
+pre,
+.highlight {
+  font-family: "Consolas", "Menlo", monospace !important;
+  font-size: 14px !important;
+}
+/* 4. ������ѧ��ʽ���� (��ֹ MathJax ���屻��Ⱦ) */
+.mjx-chtml,
+.mjx-math,
+.mjx-box {
+  font-family: inherit !important;
 }
