@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="English   中文   Français     Hi there, I am Borui HU.Welcome to my personal website! About Me  Education: I am currently a second year undergraduate student at the School of Mathematical Sciences, U">
+    <meta name="description" content="Hi there, I am Borui HU(胡博睿)!Welcome to my personal website! About Me  Education: I am currently a second year undergraduate student at the School of Mathematical Sciences, University of Science and T">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Borui&#39;s Blog">
 <meta property="og:url" content="https://boruihu.github.io/index.html">
 <meta property="og:site_name" content="Borui&#39;s Blog">
-<meta property="og:description" content="English   中文   Français     Hi there, I am Borui HU.Welcome to my personal website! About Me  Education: I am currently a second year undergraduate student at the School of Mathematical Sciences, U">
+<meta property="og:description" content="Hi there, I am Borui HU(胡博睿)!Welcome to my personal website! About Me  Education: I am currently a second year undergraduate student at the School of Mathematical Sciences, University of Science and T">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-02-17T09:10:37.486Z">
-<meta property="article:modified_time" content="2026-02-17T09:10:37.486Z">
+<meta property="article:published_time" content="2026-02-17T09:20:05.044Z">
+<meta property="article:modified_time" content="2026-02-17T09:20:05.044Z">
 <meta property="article:author" content="Borui HU">
 <meta name="twitter:card" content="summary">
     
@@ -212,81 +212,19 @@ mjx-container[display="true"] + br {
 
   <div class="content" itemprop="articleBody">
       
-          <div style="text-align: center; margin-bottom: 30px;">
-  <button onclick="switchLang('en')" id="btn-en" style="cursor:pointer; padding:8px 20px; border:1px solid #ccc; background-color:#f0f0f0; border-radius:5px; margin-right:10px; font-weight:bold;">English</button>
-  <button onclick="switchLang('cn')" id="btn-cn" style="cursor:pointer; padding:8px 20px; border:1px solid #ccc; background-color:transparent; border-radius:5px; margin-right:10px;">中文</button>
-  <button onclick="switchLang('fr')" id="btn-fr" style="cursor:pointer; padding:8px 20px; border:1px solid #ccc; background-color:transparent; border-radius:5px;">Français</button>
-</div>
-
-<div id="about-en">
-
-<p><strong>Hi there, I am Borui HU.</strong><br>Welcome to my personal website!</p>
+          <p><strong>Hi there, I am Borui HU(胡博睿)!</strong><br>Welcome to my personal website!</p>
 <p><strong>About Me</strong></p>
 <ul>
 <li><strong>Education</strong>: I am currently a second year undergraduate student at the School of Mathematical Sciences, University of Science and Technology of China (USTC).</li>
 <li><strong>Experience</strong>: My ancestral home is Li County, Hunan. I was born in Changsha, Hunan, and moved to Guilin, Guangxi when I was nine. After the college entrance exam, I was admitted to USTC, and now I live in Hefei.</li>
+<li><strong>Research</strong>: PDE.</li>
 </ul>
 <p><strong>Contact</strong></p>
 <ul>
 <li><strong>Email</strong>: boruihu[at]mail.ustc.edu.cn</li>
 <li><strong>QQ</strong>: 2812322212</li>
 </ul>
-</div>
 
-<div id="about-cn" style="display: none;">
-
-<p><strong>欢迎访问胡博睿的个人主页！</strong></p>
-<p><strong>关于我</strong></p>
-<ul>
-<li><strong>教育</strong>：我现在是中国科学技术大学数学科学学院的一名大二本科生。</li>
-<li><strong>经历</strong>：祖籍湖南澧县。生于湖南长沙，长于广西桂林。曾在上海、杭州与宁波小居（皆是难忘的回忆）。现居安徽省合肥市蜀山区。</li>
-</ul>
-<p><strong>联系方式</strong></p>
-<ul>
-<li><strong>Email</strong>: boruihu[at]mail.ustc.edu.cn</li>
-<li><strong>QQ</strong>: 2812322212</li>
-</ul>
-</div>
-
-<div id="about-fr" style="display: none;">
-
-<p><strong>Bonjour! Je m’appelle Borui HU.</strong><br>Bienvenue sur mon site personnel !</p>
-<p><strong>À propos de moi</strong></p>
-<ul>
-<li><strong>Formation</strong> : Je suis actuellement étudiant en deuxième année de licence (L2) à l’École des sciences mathématiques de l’Université des Sciences et Technologies de Chine (USTC).</li>
-<li><strong>Parcours</strong> : Mes racines se trouvent à Lixian (Hunan). Je suis né à Changsha et j’ai déménagé à Guilin (Guangxi) à l’âge de neuf ans. Après le Gaokao (le bac en Chine), j’ai été admis à l’USTC et je réside désormais à Hefei.</li>
-</ul>
-<p><strong>Contact</strong></p>
-<ul>
-<li><strong>Email</strong> : boruihu[at]mail.ustc.edu.cn</li>
-<li><strong>QQ</strong> : 2812322212</li>
-</ul>
-</div>
-
-<script>
-  function switchLang(lang) {
-    // Hide all sections
-    document.getElementById('about-en').style.display = 'none';
-    document.getElementById('about-cn').style.display = 'none';
-    document.getElementById('about-fr').style.display = 'none';
-
-    // Reset all buttons style
-    const buttons = ['btn-en', 'btn-cn', 'btn-fr'];
-    buttons.forEach(id => {
-      const btn = document.getElementById(id);
-      btn.style.backgroundColor = 'transparent';
-      btn.style.fontWeight = 'normal';
-    });
-
-    // Show selected section
-    document.getElementById('about-' + lang).style.display = 'block';
-
-    // Highlight selected button
-    const activeBtn = document.getElementById('btn-' + lang);
-    activeBtn.style.backgroundColor = '#f0f0f0';
-    activeBtn.style.fontWeight = 'bold';
-  }
-</script>
         
   </div>
 </article>
