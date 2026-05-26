@@ -55,10 +55,12 @@ h1 {
 
 .zh {
   font-family: "KaiTi", "STKaiti", "楷体", serif;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 400;
   margin-right: 0.15em;
   letter-spacing: 0.05em;
+  vertical-align: baseline;
+}
 }
 
 /* Sections */
