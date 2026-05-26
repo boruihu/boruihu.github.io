@@ -85,10 +85,6 @@ h2 {
 /* Links */
 .links {
   margin-top: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
 }
 
 a {
@@ -98,10 +94,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.cv-link {
-  font-weight: 500;
 }
 
 .email {
