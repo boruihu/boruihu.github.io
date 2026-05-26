@@ -93,6 +93,11 @@ h2 {
   margin-top: 0.75rem;
 }
 
+.pde-notice a {
+  color: #dc2626;
+  text-decoration: underline;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
