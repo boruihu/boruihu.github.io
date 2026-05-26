@@ -1,0 +1,124 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #faf9f7;
+  --fg: #1a1a1e;
+  --dim: #888;
+  --accent: #2563eb;
+  --border: #e5e5e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161618;
+    --fg: #e3e3e7;
+    --dim: #6b6b76;
+    --accent: #60a5fa;
+    --border: #2a2a2e;
+  }
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+main {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Name */
+h1 {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--dim);
+  margin-top: 0.15rem;
+}
+
+.zh {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+}
+
+/* Sections */
+section {
+  margin-top: 1.75rem;
+}
+
+.fade {
+  color: var(--dim);
+}
+
+.affiliation {
+  margin-top: 0.5rem;
+}
+
+/* Links */
+.links {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cv-link {
+  font-weight: 500;
+}
+
+.sep {
+  color: var(--border);
+  margin: 0 0.6rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2.5rem;
+}
+
+.updated {
+  font-size: 0.8rem;
+  color: var(--dim);
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
