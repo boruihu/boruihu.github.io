@@ -53,14 +53,10 @@ h1 {
   line-height: 1.15;
 }
 
-.subtitle {
-  font-size: 1rem;
-  color: var(--dim);
-  margin-top: 0.15rem;
-}
-
 .zh {
-  font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+  font-family: "KaiTi", "STKaiti", "楷体", "Noto Serif SC", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 /* Sections */
