@@ -87,6 +87,12 @@ h2 {
   margin-top: 1.75rem;
 }
 
+.pde-notice {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
