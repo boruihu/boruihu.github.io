@@ -1,15 +1,8 @@
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --bg: #faf9f7;
   --fg: #1a1a1e;
   --dim: #888;
   --accent: #2563eb;
-  --border: #e5e5e5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,8 +11,13 @@
     --fg: #e3e3e7;
     --dim: #6b6b76;
     --accent: #60a5fa;
-    --border: #2a2a2e;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -115,7 +113,6 @@ footer {
   html {
     font-size: 16px;
   }
-
   h1 {
     font-size: 1.35rem;
   }
