@@ -54,9 +54,10 @@ h1 {
 }
 
 .zh {
-  font-family: "KaiTi", "STKaiti", "楷体", "Noto Serif SC", serif;
-  font-size: 1.5rem;
+  font-family: "LXGW WenKai", "KaiTi", "STKaiti", "楷体", serif;
+  font-size: 1.9rem;
   font-weight: 400;
+  margin-right: 0.15em;
 }
 
 /* Sections */
