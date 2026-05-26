@@ -112,6 +112,15 @@ a:hover {
   color: var(--fg);
 }
 
+.nav {
+  margin-top: 1.75rem;
+}
+
+.nav .sep {
+  color: #ccc;
+  margin: 0 0.5rem;
+}
+
 /* Footer */
 footer {
   margin-top: 2.5rem;
