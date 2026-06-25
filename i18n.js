@@ -10,8 +10,7 @@ const i18n = {
     home: {
       subtitle: "Sophomore in Mathematics",
       focus: "Focus: partial differential equations",
-      school: "School of Mathematical Sciences",
-      uni: "University of Science and Technology of China",
+      affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
       updated: "Updated 2026/06/25",
     },
@@ -62,8 +61,7 @@ const i18n = {
     home: {
       subtitle: "我是一名中国科学技术大学数学科学学院的大二学生。",
       focus: "我的兴趣主要集中在偏微分方程。",
-      school: "",
-      uni: "",
+      affiliation: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
       updated: "更新于 2026/06/25",
     },
@@ -113,8 +111,7 @@ const i18n = {
     home: {
       subtitle: "Étudiant en 2e année de mathématiques",
       focus: "Spécialisation : équations aux dérivées partielles",
-      school: "École des sciences mathématiques",
-      uni: "Université des sciences et technologies de Chine",
+      affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
       updated: "Mis à jour le 25/06/2026",
     },
@@ -209,7 +206,14 @@ function applyTranslation(lang) {
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.getAttribute("data-i18n-html");
     const val = key.split(".").reduce((o, k) => o?.[k], t);
-    if (val !== undefined) el.innerHTML = val;
+    if (val !== undefined) {
+      if (val === "") {
+        el.style.display = "none";
+      } else {
+        el.style.display = "";
+        el.innerHTML = val;
+      }
+    }
   });
 
   // Update switcher active state
