@@ -60,10 +60,10 @@ const i18n = {
       cv: "简历",
     },
     home: {
-      subtitle: "数学专业大二学生",
-      focus: "研究方向：偏微分方程",
-      school: "数学科学学院",
-      uni: "中国科学技术大学",
+      subtitle: "我是一名中国科学技术大学数学科学学院的大二学生。",
+      focus: "我的兴趣主要集中在偏微分方程。",
+      school: "",
+      uni: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
       updated: "更新于 2026/06/25",
     },
@@ -195,7 +195,14 @@ function applyTranslation(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const val = key.split(".").reduce((o, k) => o?.[k], t);
-    if (val !== undefined) el.textContent = val;
+    if (val !== undefined) {
+      if (val === "") {
+        el.style.display = "none";
+      } else {
+        el.style.display = "";
+        el.textContent = val;
+      }
+    }
   });
 
   // innerHTML keys (content that may contain HTML tags)
