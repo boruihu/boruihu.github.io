@@ -126,7 +126,7 @@ const i18n = {
     research: {
       header: "Recherche",
       content:
-        "Je me prépare actuellement à mener un projet de recherche de premier cycle sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer.",
+        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer.",
     },
     ta: {
       header: "Automne 2026",
