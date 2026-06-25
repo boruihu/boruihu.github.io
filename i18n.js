@@ -83,7 +83,7 @@ const i18n = {
         "本人担任2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
     },
     education: {
-      desc: "在中国科学技术大学修读的数学专业课（不含数学分析与高等代数）。",
+      desc: "在中国科学技术大学修读的数学专业课（不含数学分析与线性代数）。",
       course0: "概率论",
       course1: "常微分方程",
       course2: "偏微分方程",
