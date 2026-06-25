@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education – Borui HU</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg">
+  <style>
+    .course-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .course-list li {
+      padding: 0.6rem 0 0.6rem 0.75rem;
+      border-left: 3px solid var(--accent);
+      line-height: 1.4;
+      transition: padding-left 0.2s;
+    }
+
+    .course-list li:hover {
+      padding-left: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .course-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1><span class="zh">胡博睿</span> Borui HU</h1>
+    </header>
+
+    <section>
+      <h2>Mathematics Coursework</h2>
+      <p class="fade">Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.</p>
+
+      <ul class="course-list">
+        <li>Probability Theory</li>
+        <li>Ordinary Differential Equations</li>
+        <li>Partial Differential Equations</li>
+        <li>Real Analysis</li>
+        <li>Complex Analysis</li>
+        <li>Modern Algebra</li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="/">← Back</a>
+    </footer>
+  </main>
+</body>
+</html>
