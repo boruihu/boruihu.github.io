@@ -197,11 +197,9 @@ footer {
   z-index: 999;
   display: flex;
   border-radius: 2rem;
-  padding: 2px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid color-mix(in srgb, var(--dim) 30%, transparent);
+  padding: 3px;
+  background: rgba(250, 249, 247, 0.88);
+  border: 1px solid rgba(136, 136, 136, 0.25);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
@@ -226,4 +224,11 @@ footer {
 
 .lang-btn:hover:not(.active) {
   color: var(--fg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .lang-switcher {
+    background: rgba(22, 22, 24, 0.88);
+    border-color: rgba(107, 107, 118, 0.3);
+  }
 }
