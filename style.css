@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  font-family: "Libertinus Serif", "Libertinus Math", "PingFang SC", "Microsoft YaHei", serif;
+  font-family: "Libertinus Serif", "Libertinus Math", "Noto Serif SC", "PingFang SC", "Microsoft YaHei", serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.65;
@@ -180,28 +180,29 @@ footer {
 /* Language switcher */
 .lang-switcher {
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   z-index: 999;
   display: flex;
-  gap: 2px;
-  background: var(--bg);
-  border: 1px solid #ddd;
   border-radius: 2rem;
-  padding: 3px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 2px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid color-mix(in srgb, var(--dim) 30%, transparent);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 .lang-btn {
   border: none;
   background: none;
-  padding: 0.25rem 0.55rem;
+  padding: 0.35rem 0.65rem;
   border-radius: 1.5rem;
   cursor: pointer;
-  font-size: 0.7rem;
-  font-family: "Libertinus Serif", "Libertinus Math", "PingFang SC", "Microsoft YaHei", serif;
+  font-size: 0.78rem;
+  font-family: "Libertinus Serif", "Libertinus Math", "Noto Serif SC", "PingFang SC", "Microsoft YaHei", serif;
   color: var(--dim);
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   letter-spacing: 0.02em;
   line-height: 1.4;
 }
@@ -213,11 +214,4 @@ footer {
 
 .lang-btn:hover:not(.active) {
   color: var(--fg);
-}
-
-@media (prefers-color-scheme: dark) {
-  .lang-switcher {
-    border-color: #333;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-  }
 }

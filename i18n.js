@@ -35,14 +35,12 @@ const i18n = {
     },
     education: {
       desc: "Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.",
-      courses: [
-        "Probability Theory",
-        "Ordinary Differential Equations",
-        "Partial Differential Equations",
-        "Real Analysis",
-        "Complex Analysis",
-        "Modern Algebra",
-      ],
+      course0: "Probability Theory",
+      course1: "Ordinary Differential Equations",
+      course2: "Partial Differential Equations",
+      course3: "Real Analysis",
+      course4: "Complex Analysis",
+      course5: "Modern Algebra",
     },
     cv: {
       header: "Curriculum Vitae",
@@ -88,14 +86,12 @@ const i18n = {
     },
     education: {
       desc: "在中国科学技术大学修读的数学专业课（不含数学分析与高等代数）。",
-      courses: [
-        "概率论",
-        "常微分方程",
-        "偏微分方程",
-        "实分析",
-        "复分析",
-        "近世代数",
-      ],
+      course0: "概率论",
+      course1: "常微分方程",
+      course2: "偏微分方程",
+      course3: "实分析",
+      course4: "复分析",
+      course5: "近世代数",
     },
     cv: {
       header: "简历",
@@ -142,14 +138,12 @@ const i18n = {
     },
     education: {
       desc: "Cours de spécialisation en mathématiques suivis à l'USTC, à l'exclusion de l'Analyse Mathématique et de l'Algèbre Linéaire.",
-      courses: [
-        "Théorie des probabilités",
-        "Équations différentielles ordinaires",
-        "Équations aux dérivées partielles",
-        "Analyse réelle",
-        "Analyse complexe",
-        "Algèbre moderne",
-      ],
+      course0: "Théorie des probabilités",
+      course1: "Équations différentielles ordinaires",
+      course2: "Équations aux dérivées partielles",
+      course3: "Analyse réelle",
+      course4: "Analyse complexe",
+      course5: "Algèbre moderne",
     },
     cv: {
       header: "Curriculum Vitae",
@@ -210,14 +204,6 @@ function applyTranslation(lang) {
     const val = key.split(".").reduce((o, k) => o?.[k], t);
     if (val !== undefined) el.innerHTML = val;
   });
-
-  // Course list (education page)
-  const courseList = document.querySelector("[data-i18n-courses]");
-  if (courseList && t.education.courses) {
-    courseList.innerHTML = t.education.courses
-      .map((c) => `<li>${c}</li>`)
-      .join("");
-  }
 
   // Update switcher active state
   document.querySelectorAll(".lang-btn").forEach((btn) => {
