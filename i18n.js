@@ -67,10 +67,10 @@ const i18n = {
     },
     about: {
       header: "关于我",
-      para1: "我学的是纯数学。",
+      para1: "我的方向是基础数学。",
       para2:
-        '我出生于<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>，祖籍<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时随家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到十七岁。2024年我通过高考进入中国科学技术大学，目前生活在合肥。此外，我还在宁波、杭州和上海各住过几周——每座城市都留下了难忘的回忆。',
-      para3: "不被数学折磨的时候，我是曼城的铁杆球迷。音乐节我也常去。以前还写过一些现代诗。",
+        '我出生于<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>，祖籍在<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。此外，我还在宁波、杭州和上海各住过几周，皆是难忘的回忆。',
+      para3: "闲来无事的时候，我经常熬夜看曼城的比赛。我还非常喜欢去音乐节，与我喜爱的乐队们相会。我对各种语言的现代诗歌也很感兴趣。",
     },
     research: {
       header: "研究",
