@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap");
+
 :root {
   --bg: #faf9f7;
   --fg: #1a1a1e;
@@ -172,5 +174,50 @@ footer {
   }
   h1 {
     font-size: 1.35rem;
+  }
+}
+
+/* Language switcher */
+.lang-switcher {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 999;
+  display: flex;
+  gap: 2px;
+  background: var(--bg);
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  padding: 3px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lang-btn {
+  border: none;
+  background: none;
+  padding: 0.25rem 0.55rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-family: "Libertinus Serif", "Libertinus Math", "PingFang SC", "Microsoft YaHei", serif;
+  color: var(--dim);
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--fg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .lang-switcher {
+    border-color: #333;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   }
 }

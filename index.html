@@ -7,9 +7,6 @@
   <title>Borui HU</title>
   <link rel="stylesheet" href="style.css?v=3">
   <link rel="icon" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <main>
@@ -19,35 +16,37 @@
 
     <section>
       <p>
-        Sophomore in Mathematics<br>
-        <span class="fade">Focus: partial differential equations</span>
+        <span data-i18n="home.subtitle">Sophomore in Mathematics</span><br>
+        <span class="fade" data-i18n="home.focus">Focus: partial differential equations</span>
       </p>
       <p class="affiliation">
-        School of Mathematical Sciences<br>
-        University of Science and Technology of China
+        <span data-i18n="home.school">School of Mathematical Sciences</span><br>
+        <span data-i18n="home.uni">University of Science and Technology of China</span>
       </p>
     </section>
 
     <nav class="nav">
-      <a href="about.html">About</a>
+      <a href="about.html" data-i18n-nav="about">About</a>
       <span class="sep">·</span>
-      <a href="research.html">Research</a>
+      <a href="research.html" data-i18n-nav="research">Research</a>
       <span class="sep">·</span>
-      <a href="ta.html">TA</a>
+      <a href="ta.html" data-i18n-nav="ta">TA</a>
       <span class="sep">·</span>
-      <a href="education.html">Education</a>
+      <a href="education.html" data-i18n-nav="education">Education</a>
       <span class="sep">·</span>
-      <a href="CV_HBr.pdf">CV</a>
+      <a href="cv.html" data-i18n-nav="cv">CV</a>
     </nav>
 
     <section class="links">
-      <span class="email">Contact: boruihu2006[at]gmail.com</span>
-      <p class="pde-notice">本人担任2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href="mailto:pdeyyan@126.com">pdeyyan@126.com</a>，详情请见课程<a href="https://www.zhangjy9610.me/2026F-PDE1.html">主页</a>。</p>
+      <span class="email" data-i18n="home.contact">Contact: boruihu2006[at]gmail.com</span>
+      <p class="pde-notice" data-no-translate>本人担任2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href="mailto:pdeyyan@126.com">pdeyyan@126.com</a>，详情请见课程<a href="https://www.zhangjy9610.me/2026F-PDE1.html">主页</a>。</p>
     </section>
 
     <footer>
-      <p class="updated">Updated 2026/06/25</p>
+      <p class="updated" data-i18n="home.updated">Updated 2026/06/25</p>
     </footer>
   </main>
+
+  <script src="i18n.js"></script>
 </body>
 </html>
