@@ -24,14 +24,14 @@
     .layer2 { --layer-color: #16a34a; }
     .layer3 { --layer-color: #d97706; }
 
-    .layer-header.layer1 { border-color: #2563eb; }
-    .layer-header.layer2 { border-color: #16a34a; }
-    .layer-header.layer3 { border-color: #d97706; }
+    .layer1 .layer-header { border-color: #2563eb; }
+    .layer2 .layer-header { border-color: #16a34a; }
+    .layer3 .layer-header { border-color: #d97706; }
 
     @media (prefers-color-scheme: dark) {
-      .layer-header.layer1 { border-color: #60a5fa; }
-      .layer-header.layer2 { border-color: #4ade80; }
-      .layer-header.layer3 { border-color: #fbbf24; }
+      .layer1 .layer-header { border-color: #60a5fa; }
+      .layer2 .layer-header { border-color: #4ade80; }
+      .layer3 .layer-header { border-color: #fbbf24; }
       .layer1 { --layer-color: #60a5fa; }
       .layer2 { --layer-color: #4ade80; }
       .layer3 { --layer-color: #fbbf24; }
@@ -76,8 +76,8 @@
     <section>
       <p class="fade" data-i18n="education.desc">Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.</p>
 
-      <div class="layer">
-        <h2 class="layer-header layer1" data-i18n="education.semester1">Sophomore Fall</h2>
+      <div class="layer layer1">
+        <h2 class="layer-header" data-i18n="education.semester1">Sophomore Fall</h2>
         <ul class="course-list">
           <li data-i18n="education.course0">Probability Theory</li>
           <li data-i18n="education.course1">Ordinary Differential Equations</li>
@@ -85,8 +85,8 @@
         </ul>
       </div>
 
-      <div class="layer">
-        <h2 class="layer-header layer2" data-i18n="education.semester2">Sophomore Spring</h2>
+      <div class="layer layer2">
+        <h2 class="layer-header" data-i18n="education.semester2">Sophomore Spring</h2>
         <ul class="course-list">
           <li data-i18n="education.course3">Real Analysis</li>
           <li data-i18n="education.course4">Complex Analysis</li>
@@ -94,8 +94,8 @@
         </ul>
       </div>
 
-      <div class="layer">
-        <h2 class="layer-header layer3" data-i18n="education.semester3">Junior Fall</h2>
+      <div class="layer layer3">
+        <h2 class="layer-header" data-i18n="education.semester3">Junior Fall</h2>
         <ul class="course-list">
           <li data-i18n="education.course6">Functional Analysis</li>
           <li data-i18n="education.course7">Differential Geometry</li>
