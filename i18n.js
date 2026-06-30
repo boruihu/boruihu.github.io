@@ -46,6 +46,9 @@ const i18n = {
       course9: "Topology",
       course10: "Advanced Real Analysis",
       course11: "Operations Research",
+      semester1: "Sophomore Fall",
+      semester2: "Sophomore Spring",
+      semester3: "Junior Fall",
     },
     cv: {
       header: "Curriculum Vitae",
@@ -102,6 +105,9 @@ const i18n = {
       course9: "拓扑学",
       course10: "高等实分析",
       course11: "运筹学",
+      semester1: "大二上",
+      semester2: "大二下",
+      semester3: "大三上",
     },
     cv: {
       header: "简历",
@@ -159,6 +165,9 @@ const i18n = {
       course9: "Topologie",
       course10: "Analyse réelle avancée",
       course11: "Recherche opérationnelle",
+      semester1: "Deuxième année, premier semestre",
+      semester2: "Deuxième année, deuxième semestre",
+      semester3: "Troisième année, premier semestre",
     },
     cv: {
       header: "Curriculum Vitae",

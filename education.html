@@ -7,10 +7,40 @@
   <link rel="stylesheet" href="style.css?v=4">
   <link rel="icon" href="favicon.svg">
   <style>
+    .layer {
+      margin-top: 1.75rem;
+    }
+
+    .layer-header {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.6rem;
+      padding-left: 0.75rem;
+      border-left: 4px solid;
+    }
+
+    .layer1 { --layer-color: #2563eb; }
+    .layer2 { --layer-color: #16a34a; }
+    .layer3 { --layer-color: #d97706; }
+
+    .layer-header.layer1 { border-color: #2563eb; }
+    .layer-header.layer2 { border-color: #16a34a; }
+    .layer-header.layer3 { border-color: #d97706; }
+
+    @media (prefers-color-scheme: dark) {
+      .layer-header.layer1 { border-color: #60a5fa; }
+      .layer-header.layer2 { border-color: #4ade80; }
+      .layer-header.layer3 { border-color: #fbbf24; }
+      .layer1 { --layer-color: #60a5fa; }
+      .layer2 { --layer-color: #4ade80; }
+      .layer3 { --layer-color: #fbbf24; }
+    }
+
     .course-list {
       list-style: none;
       padding: 0;
-      margin: 1.5rem 0 0;
+      margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.75rem;
@@ -18,7 +48,7 @@
 
     .course-list li {
       padding: 0.6rem 0 0.6rem 0.75rem;
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid var(--layer-color, var(--accent));
       line-height: 1.4;
       transition: padding-left 0.2s;
     }
@@ -30,6 +60,9 @@
     @media (max-width: 480px) {
       .course-list {
         grid-template-columns: 1fr;
+      }
+      .layer-header {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -43,20 +76,35 @@
     <section>
       <p class="fade" data-i18n="education.desc">Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.</p>
 
-      <ul class="course-list">
-        <li data-i18n="education.course0">Probability Theory</li>
-        <li data-i18n="education.course1">Ordinary Differential Equations</li>
-        <li data-i18n="education.course2">Partial Differential Equations</li>
-        <li data-i18n="education.course3">Real Analysis</li>
-        <li data-i18n="education.course4">Complex Analysis</li>
-        <li data-i18n="education.course5">Modern Algebra</li>
-        <li data-i18n="education.course6">Functional Analysis</li>
-        <li data-i18n="education.course7">Differential Geometry</li>
-        <li data-i18n="education.course8">Combinatorics</li>
-        <li data-i18n="education.course9">Topology</li>
-        <li data-i18n="education.course10">Advanced Real Analysis</li>
-        <li data-i18n="education.course11">Operations Research</li>
-      </ul>
+      <div class="layer">
+        <h2 class="layer-header layer1" data-i18n="education.semester1">Sophomore Fall</h2>
+        <ul class="course-list">
+          <li data-i18n="education.course0">Probability Theory</li>
+          <li data-i18n="education.course1">Ordinary Differential Equations</li>
+          <li data-i18n="education.course2">Partial Differential Equations</li>
+        </ul>
+      </div>
+
+      <div class="layer">
+        <h2 class="layer-header layer2" data-i18n="education.semester2">Sophomore Spring</h2>
+        <ul class="course-list">
+          <li data-i18n="education.course3">Real Analysis</li>
+          <li data-i18n="education.course4">Complex Analysis</li>
+          <li data-i18n="education.course5">Modern Algebra</li>
+        </ul>
+      </div>
+
+      <div class="layer">
+        <h2 class="layer-header layer3" data-i18n="education.semester3">Junior Fall</h2>
+        <ul class="course-list">
+          <li data-i18n="education.course6">Functional Analysis</li>
+          <li data-i18n="education.course7">Differential Geometry</li>
+          <li data-i18n="education.course8">Combinatorics</li>
+          <li data-i18n="education.course9">Topology</li>
+          <li data-i18n="education.course10">Advanced Real Analysis</li>
+          <li data-i18n="education.course11">Operations Research</li>
+        </ul>
+      </div>
     </section>
 
     <footer>
