@@ -74,7 +74,7 @@ html {
 }
 
 body {
-  font-family: "Libertinus Serif", "Libertinus Math", "Noto Serif SC", "PingFang SC", "Microsoft YaHei", serif;
+  font-family: "Libertinus Serif", "Libertinus Math", "PingFang SC", "Noto Serif SC", "Microsoft YaHei", serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.65;
@@ -93,7 +93,7 @@ main {
 
 /* Name */
 h1 {
-  font-family: "Libertinus Serif", "Libertinus Math", "KaiTi", "STKaiti", serif;
+  font-family: "Libertinus Serif", "Libertinus Math", "STKaiti", "KaiTi", serif;
   font-size: 1.7rem;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -101,7 +101,7 @@ h1 {
 }
 
 .zh {
-  font-family: "KaiTi", "STKaiti", "楷体", serif;
+  font-family: "STKaiti", "KaiTi", "楷体", serif;
   font-size: 1.7rem;
   font-weight: 400;
   margin-right: 0.15em;
@@ -140,7 +140,7 @@ h2 {
   color: var(--fg);
   font-size: 0.9rem;
   margin-top: 0.75rem;
-  font-family: "Noto Serif SC", "PingFang SC", "Microsoft YaHei", serif;
+  font-family: "PingFang SC", "Noto Serif SC", "Microsoft YaHei", serif;
 }
 
 .pde-notice a {
@@ -210,7 +210,7 @@ footer {
   border-radius: 1.5rem;
   cursor: pointer;
   font-size: 0.78rem;
-  font-family: "Libertinus Serif", "Libertinus Math", "Noto Serif SC", "PingFang SC", "Microsoft YaHei", serif;
+  font-family: "Libertinus Serif", "Libertinus Math", "PingFang SC", "Noto Serif SC", "Microsoft YaHei", serif;
   color: var(--dim);
   transition: all 0.2s ease;
   letter-spacing: 0.02em;
