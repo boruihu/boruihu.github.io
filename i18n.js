@@ -60,7 +60,7 @@ const i18n = {
       title: "Misc – Borui HU 胡博睿",
       header: "Misc",
       item0: "Fifty Years of Mathematics at USTC",
-      item1: "Mathematics Exam Archives",
+      item1: "USTC Mathematics Exam Papers",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",
@@ -205,7 +205,7 @@ const i18n = {
       title: "Divers – Borui HU 胡博睿",
       header: "Divers",
       item0: "Cinquante ans de mathématiques à l'USTC",
-      item1: "Annales d'examens de mathématiques",
+      item1: "Sujets d'examen de mathématiques de l'USTC",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",
