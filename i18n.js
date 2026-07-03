@@ -59,6 +59,7 @@ const i18n = {
     misc: {
       title: "Misc – Borui HU 胡博睿",
       header: "Misc",
+      item0: "中国科大数学五十年",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",

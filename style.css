@@ -232,3 +232,14 @@ footer {
     border-color: rgba(107, 107, 118, 0.3);
   }
 }
+
+.misc-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.misc-list li {
+  padding: 0.25rem 0;
+  line-height: 1.5;
+}
