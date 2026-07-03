@@ -5,6 +5,7 @@ const i18n = {
       research: "Research",
       ta: "TA",
       education: "Education",
+      misc: "Misc",
       cv: "CV",
     },
     home: {
@@ -55,6 +56,10 @@ const i18n = {
       semester2: "Sophomore Spring",
       semester3: "Junior Fall",
     },
+    misc: {
+      title: "Misc – Borui HU 胡博睿",
+      header: "Misc",
+    },
     cv: {
       title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
@@ -71,6 +76,7 @@ const i18n = {
       research: "研究",
       ta: "助教",
       education: "课程",
+      misc: "杂项",
       cv: "简历",
     },
     home: {
@@ -120,6 +126,10 @@ const i18n = {
       semester2: "大二下",
       semester3: "大三上",
     },
+    misc: {
+      title: "杂项 – 胡博睿",
+      header: "杂项",
+    },
     cv: {
       title: "简历 – 胡博睿",
       header: "简历",
@@ -136,6 +146,7 @@ const i18n = {
       research: "Recherche",
       ta: "Assistant",
       education: "Cours",
+      misc: "Divers",
       cv: "CV",
     },
     home: {
@@ -186,6 +197,10 @@ const i18n = {
       semester2: "Deuxième année, deuxième semestre",
       semester3: "Troisième année, premier semestre",
     },
+    misc: {
+      title: "Divers – Borui HU 胡博睿",
+      header: "Divers",
+    },
     cv: {
       title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
@@ -204,6 +219,7 @@ function getPage() {
   if (path.endsWith("ta.html")) return "ta";
   if (path.endsWith("education.html")) return "education";
   if (path.endsWith("cv.html")) return "cv";
+  if (path.endsWith("misc.html")) return "misc";
   return "home";
 }
 
