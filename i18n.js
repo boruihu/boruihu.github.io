@@ -61,6 +61,7 @@ const i18n = {
       header: "Misc",
       item0: "Fifty Years of Mathematics at USTC",
       item1: "USTC Mathematics Exam Papers",
+      item2: "Mathematics Course Videos",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",
@@ -133,6 +134,7 @@ const i18n = {
       header: "杂项",
       item0: "中国科大数学五十年",
       item1: "中国科大数学学科考试试卷",
+      item2: "一些数学专业课程",
     },
     cv: {
       title: "简历 – 胡博睿",
@@ -206,6 +208,7 @@ const i18n = {
       header: "Divers",
       item0: "Cinquante ans de mathématiques à l'USTC",
       item1: "Sujets d'examen de mathématiques de l'USTC",
+      item2: "Cours de mathématiques en vidéo",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",
