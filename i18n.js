@@ -8,6 +8,7 @@ const i18n = {
       cv: "CV",
     },
     home: {
+      title: "Borui HU 胡博睿 | Homepage",
       subtitle: "Sophomore in Mathematics",
       focus: "Focus: partial differential equations",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
@@ -15,6 +16,7 @@ const i18n = {
       updated: "Updated 2026/06/25",
     },
     about: {
+      title: "About – Borui HU 胡博睿",
       header: "About Me",
       para1: "I study pure mathematics.",
       para2:
@@ -23,16 +25,19 @@ const i18n = {
         "When math isn't torturing me, I'm a die-hard Manchester City fan. I'm a regular at music festivals. I used to write modern poetry.",
     },
     research: {
+      title: "Research – Borui HU 胡博睿",
       header: "Research",
       content:
         "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined.",
     },
     ta: {
+      title: "TA – Borui HU 胡博睿",
       header: "2026 Fall",
       content:
         "I am serving as a teaching assistant for 001122.01 Partial Differential Equations, instructed by Prof. Junyan Zhang, in the 2026 Fall semester. Students can submit electronic homework assignments to <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Further information can be found on the <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">course page</a>.",
     },
     education: {
+      title: "Education – Borui HU 胡博睿",
       desc: "Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.",
       course0: "Probability Theory",
       course1: "Ordinary Differential Equations",
@@ -51,6 +56,7 @@ const i18n = {
       semester3: "Junior Fall",
     },
     cv: {
+      title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
       content: "Not yet available.",
     },
@@ -68,6 +74,7 @@ const i18n = {
       cv: "简历",
     },
     home: {
+      title: "胡博睿的个人主页",
       subtitle: "我是一名中国科学技术大学数学科学学院的大二学生。",
       focus: "我的兴趣主要集中在偏微分方程。",
       affiliation: "",
@@ -75,6 +82,7 @@ const i18n = {
       updated: "更新于 2026/06/25",
     },
     about: {
+      title: "关于 – 胡博睿",
       header: "关于我",
       para1: "我的方向是基础数学。",
       para2:
@@ -82,16 +90,19 @@ const i18n = {
       para3: "闲来无事的时候，我经常熬夜看曼城的比赛。我还非常喜欢去音乐节，与我喜爱的乐队们相会。我对各种语言的现代诗歌也很感兴趣。",
     },
     research: {
+      title: "研究 – 胡博睿",
       header: "研究",
       content:
         "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。",
     },
     ta: {
+      title: "助教 – 胡博睿",
       header: "2026年秋季学期",
       content:
         "本人担任2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
     },
     education: {
+      title: "课程 – 胡博睿",
       desc: "在中国科学技术大学修读的数学专业课（不含数学分析与线性代数）。",
       course0: "概率论",
       course1: "常微分方程",
@@ -110,6 +121,7 @@ const i18n = {
       semester3: "大三上",
     },
     cv: {
+      title: "简历 – 胡博睿",
       header: "简历",
       content: "暂未开放。",
     },
@@ -127,6 +139,7 @@ const i18n = {
       cv: "CV",
     },
     home: {
+      title: "Borui HU 胡博睿 | Accueil",
       subtitle: "Étudiant en 2e année de mathématiques",
       focus: "Spécialisation : équations aux dérivées partielles",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
@@ -134,6 +147,7 @@ const i18n = {
       updated: "Mis à jour le 25/06/2026",
     },
     about: {
+      title: "À propos – Borui HU 胡博睿",
       header: "À propos de moi",
       para1: "J'étudie les mathématiques pures.",
       para2:
@@ -142,16 +156,19 @@ const i18n = {
         "Quand les maths ne me torturent pas, je suis un fan inconditionnel de Manchester City. Je vais régulièrement dans des festivals de musique. J'écrivais de la poésie moderne.",
     },
     research: {
+      title: "Recherche – Borui HU 胡博睿",
       header: "Recherche",
       content:
         "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer.",
     },
     ta: {
+      title: "Assistant – Borui HU 胡博睿",
       header: "Automne 2026",
       content:
         "Je suis assistant d'enseignement pour le cours 001122.01 Équations aux Dérivées Partielles, dispensé par le Prof. Junyan Zhang, au semestre d'automne 2026. Les étudiants peuvent soumettre leurs devoirs électroniques à <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Plus d'informations sont disponibles sur la <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">page du cours</a>.",
     },
     education: {
+      title: "Cours – Borui HU 胡博睿",
       desc: "Cours de spécialisation en mathématiques suivis à l'USTC, à l'exclusion de l'Analyse Mathématique et de l'Algèbre Linéaire.",
       course0: "Théorie des probabilités",
       course1: "Équations différentielles ordinaires",
@@ -170,6 +187,7 @@ const i18n = {
       semester3: "Troisième année, premier semestre",
     },
     cv: {
+      title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
       content: "Pas encore disponible.",
     },
@@ -208,6 +226,10 @@ function applyTranslation(lang) {
   const page = getPage();
 
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+
+  // Page title
+  const pageTitle = t[page]?.title;
+  if (pageTitle) document.title = pageTitle;
 
   // Nav
   document.querySelectorAll("[data-i18n-nav]").forEach((el) => {
