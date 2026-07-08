@@ -4,6 +4,7 @@ const i18n = {
       about: "About",
       research: "Research",
       ta: "TA",
+      experience: "Experience",
       education: "Education",
       misc: "Misc",
       cv: "CV",
@@ -36,6 +37,11 @@ const i18n = {
       header: "2026 Fall",
       content:
         "I am serving as a teaching assistant for 001122.01 Partial Differential Equations, instructed by Prof. Junyan Zhang, in the 2026 Fall semester. Students can submit electronic homework assignments to <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Further information can be found on the <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">course page</a>.",
+    },
+    experience: {
+      title: "Experience – Borui HU 胡博睿",
+      header: "Experience",
+      content: "Coming soon.",
     },
     education: {
       title: "Education – Borui HU 胡博睿",
@@ -77,6 +83,7 @@ const i18n = {
       about: "关于",
       research: "研究",
       ta: "助教",
+      experience: "经历",
       education: "课程",
       misc: "杂项",
       cv: "简历",
@@ -108,6 +115,11 @@ const i18n = {
       header: "2026年秋季学期",
       content:
         "本人担任2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
+    },
+    experience: {
+      title: "经历 – 胡博睿",
+      header: "经历",
+      content: "待更新。",
     },
     education: {
       title: "课程 – 胡博睿",
@@ -149,6 +161,7 @@ const i18n = {
       about: "À propos",
       research: "Recherche",
       ta: "Assistant",
+      experience: "Expériences",
       education: "Cours",
       misc: "Divers",
       cv: "CV",
@@ -181,6 +194,11 @@ const i18n = {
       header: "Automne 2026",
       content:
         "Je suis assistant d'enseignement pour le cours 001122.01 Équations aux Dérivées Partielles, dispensé par le Prof. Junyan Zhang, au semestre d'automne 2026. Les étudiants peuvent soumettre leurs devoirs électroniques à <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Plus d'informations sont disponibles sur la <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">page du cours</a>.",
+    },
+    experience: {
+      title: "Expériences – Borui HU 胡博睿",
+      header: "Expériences",
+      content: "À venir.",
     },
     education: {
       title: "Cours – Borui HU 胡博睿",
@@ -223,6 +241,7 @@ function getPage() {
   if (path.endsWith("about.html")) return "about";
   if (path.endsWith("research.html")) return "research";
   if (path.endsWith("ta.html")) return "ta";
+  if (path.endsWith("experience.html")) return "experience";
   if (path.endsWith("education.html")) return "education";
   if (path.endsWith("cv.html")) return "cv";
   if (path.endsWith("misc.html")) return "misc";
