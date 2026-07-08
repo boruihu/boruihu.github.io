@@ -317,12 +317,48 @@ function switchLang(lang) {
   applyTranslation(lang);
 }
 
+// Dark mode
+function initTheme() {
+  const saved = localStorage.getItem("dark");
+  if (saved !== null) {
+    document.documentElement.classList.toggle("dark", saved === "true");
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.documentElement.classList.add("dark");
+  }
+  updateDarkBtn();
+}
+
+function toggleDark() {
+  document.documentElement.classList.toggle("dark");
+  try {
+    localStorage.setItem("dark", document.documentElement.classList.contains("dark"));
+  } catch {}
+  updateDarkBtn();
+}
+
+function updateDarkBtn() {
+  const btn = document.querySelector(".dark-btn");
+  if (!btn) return;
+  btn.textContent = document.documentElement.classList.contains("dark") ? "☀" : "☾";
+}
+
 // Init
 document.addEventListener("DOMContentLoaded", () => {
-  // Build the language switcher
-  const switcher = document.createElement("div");
-  switcher.className = "lang-switcher";
-  switcher.setAttribute("data-no-translate", "");
+  // Menu button
+  const menuBtn = document.createElement("div");
+  menuBtn.className = "menu-btn";
+  menuBtn.setAttribute("data-no-translate", "");
+  menuBtn.textContent = "···";
+  document.body.appendChild(menuBtn);
+
+  // Menu card
+  const card = document.createElement("div");
+  card.className = "menu-card";
+  card.setAttribute("data-no-translate", "");
+
+  // Language buttons
+  const langsDiv = document.createElement("div");
+  langsDiv.className = "menu-langs";
   const langs = [
     { code: "en", label: "EN" },
     { code: "zh", label: "中文" },
@@ -333,11 +369,41 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.className = "lang-btn";
     btn.dataset.lang = code;
     btn.textContent = label;
-    btn.addEventListener("click", () => switchLang(code));
-    switcher.appendChild(btn);
+    btn.addEventListener("click", () => {
+      switchLang(code);
+      card.classList.remove("open");
+    });
+    langsDiv.appendChild(btn);
   });
-  document.body.appendChild(switcher);
+  card.appendChild(langsDiv);
 
+  // Divider
+  const divider = document.createElement("div");
+  divider.className = "menu-divider";
+  card.appendChild(divider);
+
+  // Dark mode toggle
+  const darkBtn = document.createElement("button");
+  darkBtn.className = "dark-btn";
+  darkBtn.addEventListener("click", toggleDark);
+  card.appendChild(darkBtn);
+
+  document.body.appendChild(card);
+
+  // Toggle menu
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    card.classList.toggle("open");
+  });
+
+  // Close menu on outside click
+  document.addEventListener("click", (e) => {
+    if (!card.contains(e.target) && !menuBtn.contains(e.target)) {
+      card.classList.remove("open");
+    }
+  });
+
+  initTheme();
   applyTranslation(getSavedLang());
 
   // Click name to go home
