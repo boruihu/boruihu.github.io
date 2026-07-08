@@ -29,14 +29,12 @@
     .layer2 .layer-header { border-color: #16a34a; }
     .layer3 .layer-header { border-color: #d97706; }
 
-    @media (prefers-color-scheme: dark) {
-      .layer1 .layer-header { border-color: #60a5fa; }
-      .layer2 .layer-header { border-color: #4ade80; }
-      .layer3 .layer-header { border-color: #fbbf24; }
-      .layer1 { --layer-color: #60a5fa; }
-      .layer2 { --layer-color: #4ade80; }
-      .layer3 { --layer-color: #fbbf24; }
-    }
+    :root.dark .layer1 .layer-header { border-color: #60a5fa; }
+    :root.dark .layer2 .layer-header { border-color: #4ade80; }
+    :root.dark .layer3 .layer-header { border-color: #fbbf24; }
+    :root.dark .layer1 { --layer-color: #60a5fa; }
+    :root.dark .layer2 { --layer-color: #4ade80; }
+    :root.dark .layer3 { --layer-color: #fbbf24; }
 
     .course-list {
       list-style: none;
@@ -101,9 +99,8 @@
           <li data-i18n="education.course6">Functional Analysis</li>
           <li data-i18n="education.course7">Differential Geometry</li>
           <li data-i18n="education.course8">Combinatorics</li>
-          <li data-i18n="education.course9">Topology (H)</li>
+          <li data-i18n="education.course9">Topology</li>
           <li data-i18n="education.course10">Advanced Real Analysis</li>
-          <li data-i18n="education.course11">Operations Research</li>
         </ul>
       </div>
     </section>
