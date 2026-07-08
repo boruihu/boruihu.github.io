@@ -11,7 +11,7 @@ const i18n = {
     home: {
       title: "Borui HU 胡博睿 | Homepage",
       subtitle: "Sophomore in Mathematics",
-      focus: "Focus: partial differential equations",
+      focus: "Focus: analysis",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
       updated: "Updated 2026/06/25",
@@ -84,7 +84,7 @@ const i18n = {
     home: {
       title: "胡博睿的个人主页",
       subtitle: "我是一名中国科学技术大学数学科学学院的大二学生。",
-      focus: "我的兴趣主要集中在偏微分方程。",
+      focus: "我的兴趣主要集中在分析。",
       affiliation: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
       updated: "更新于 2026/06/25",
@@ -156,7 +156,7 @@ const i18n = {
     home: {
       title: "Borui HU 胡博睿 | Accueil",
       subtitle: "Étudiant en 2e année de mathématiques",
-      focus: "Spécialisation : équations aux dérivées partielles",
+      focus: "Spécialisation : analyse",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
       updated: "Mis à jour le 25/06/2026",
