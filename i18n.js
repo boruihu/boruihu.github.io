@@ -14,7 +14,7 @@ const i18n = {
       focus: "Focus: analysis",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
-      updated: "Updated 2026/06/25",
+      updated: "Updated 2026/07/09",
     },
     about: {
       title: "About – Borui HU 胡博睿",
@@ -87,7 +87,7 @@ const i18n = {
       focus: "我的兴趣主要集中在分析。",
       affiliation: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
-      updated: "更新于 2026/06/25",
+      updated: "更新于 2026/07/09",
     },
     about: {
       title: "关于 – 胡博睿",
@@ -159,7 +159,7 @@ const i18n = {
       focus: "Spécialisation : analyse",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
-      updated: "Mis à jour le 25/06/2026",
+      updated: "Mis à jour le 09/07/2026",
     },
     about: {
       title: "À propos – Borui HU 胡博睿",
