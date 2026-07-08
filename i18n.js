@@ -41,7 +41,7 @@ const i18n = {
     experience: {
       title: "Experience – Borui HU 胡博睿",
       header: "Experience",
-      content: "Coming soon.",
+      content: "July 2026: Westlake University Mathematics Summer School",
     },
     education: {
       title: "Education – Borui HU 胡博睿",
@@ -119,7 +119,7 @@ const i18n = {
     experience: {
       title: "经历 – 胡博睿",
       header: "经历",
-      content: "待更新。",
+      content: "2026年7月 西湖大学数学暑期学校",
     },
     education: {
       title: "课程 – 胡博睿",
@@ -198,7 +198,7 @@ const i18n = {
     experience: {
       title: "Expériences – Borui HU 胡博睿",
       header: "Expériences",
-      content: "À venir.",
+      content: "Juillet 2026 : École d'été de mathématiques à l'Université Westlake",
     },
     education: {
       title: "Cours – Borui HU 胡博睿",
