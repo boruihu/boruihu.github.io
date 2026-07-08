@@ -339,4 +339,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(switcher);
 
   applyTranslation(getSavedLang());
+
+  // Click name to go home
+  document.querySelector("h1")?.addEventListener("click", () => {
+    location.href = "/";
+  });
 });
