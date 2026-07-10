@@ -29,7 +29,7 @@ const i18n = {
       title: "Research – Borui HU 胡博睿",
       header: "Research",
       content:
-        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined.",
+        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined. I am also attending the fluid PDE seminar organized by Prof. Zhang.",
     },
     ta: {
       title: "TA – Borui HU 胡博睿",
@@ -101,7 +101,7 @@ const i18n = {
       title: "研究 – 胡博睿",
       header: "研究",
       content:
-        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。",
+        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。我也正在参加章老师举行的流体PDE讨论班。",
     },
     ta: {
       title: "助教 – 胡博睿",
@@ -174,7 +174,7 @@ const i18n = {
       title: "Recherche – Borui HU 胡博睿",
       header: "Recherche",
       content:
-        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer.",
+        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer. Je participe également au séminaire sur les EDP des fluides organisé par le Prof. Zhang.",
     },
     ta: {
       title: "Assistant – Borui HU 胡博睿",
