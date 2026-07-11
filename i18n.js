@@ -1,6 +1,7 @@
 const i18n = {
   en: {
     nav: {
+      home: "Home",
       about: "About",
       research: "Research",
       ta: "TA",
@@ -74,6 +75,7 @@ const i18n = {
 
   zh: {
     nav: {
+      home: "首页",
       about: "关于",
       research: "研究",
       ta: "助教",
@@ -146,6 +148,7 @@ const i18n = {
 
   fr: {
     nav: {
+      home: "Accueil",
       about: "À propos",
       research: "Recherche",
       ta: "Assistant",
@@ -382,6 +385,54 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!card.contains(e.target) && !menuBtn.contains(e.target)) {
       card.classList.remove("open");
     }
+    if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
+      navCard.classList.remove("open");
+    }
+  });
+
+  // === Nav menu ===
+  const navBtn = document.createElement("div");
+  navBtn.className = "menu-btn nav-btn";
+  navBtn.setAttribute("data-no-translate", "");
+  navBtn.textContent = "☰";
+  document.body.appendChild(navBtn);
+
+  const navCard = document.createElement("div");
+  navCard.className = "menu-card nav-card";
+  navCard.setAttribute("data-no-translate", "");
+
+  const navPages = [
+    { href: "/", key: "home" },
+    { href: "about.html", key: "about" },
+    { href: "research.html", key: "research" },
+    { href: "ta.html", key: "ta" },
+    { href: "education.html", key: "education" },
+    { href: "misc.html", key: "misc" },
+    { href: "CV_HBr.pdf", key: "cv" },
+  ];
+
+  navPages.forEach(({ href, key }) => {
+    const a = document.createElement("a");
+    a.href = href;
+    a.className = "nav-menu-link";
+    a.setAttribute("data-i18n-nav", key);
+    a.textContent = key;
+    navCard.appendChild(a);
+  });
+
+  document.body.appendChild(navCard);
+
+  navBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    card.classList.remove("open");
+    navCard.classList.toggle("open");
+  });
+
+  // Close nav card on link click
+  navCard.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      navCard.classList.remove("open");
+    });
   });
 
   initTheme();
