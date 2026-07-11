@@ -22,9 +22,7 @@ const i18n = {
       header: "About Me",
       para1: "I study pure mathematics.",
       para2:
-        'I was born in <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. My ancestral hometown is in <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">Li County</a>. At nine, my family moved to <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, where I lived until seventeen. In 2024, I entered USTC through the college entrance exam, so I now live in Hefei. I\'ve also lived in Ningbo, Hangzhou and Shanghai for weeks — each place holds unforgettable memories.',
-      para3:
-        "When math isn't torturing me, I'm a die-hard Manchester City fan. I'm a regular at music festivals. I used to write modern poetry.",
+        'I was born in <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. My ancestral hometown is in <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">Li County</a>. At nine, my family moved to <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, where I lived until seventeen. In 2024, I entered USTC through the college entrance exam, so I now live in Hefei.',
     },
     research: {
       title: "Research – Borui HU 胡博睿",
@@ -96,8 +94,7 @@ const i18n = {
       header: "关于我",
       para1: "我的方向是基础数学。",
       para2:
-        '我出生于<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>，祖籍在<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。此外，我还在宁波、杭州和上海各住过几周，皆是难忘的回忆。',
-      para3: "闲来无事的时候，我经常熬夜看曼城的比赛。我还非常喜欢去音乐节，与我喜爱的乐队们相会。我对各种语言的现代诗歌也很感兴趣。",
+        '我出生于<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>，祖籍在<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。',
     },
     research: {
       title: "研究 – 胡博睿",
@@ -169,9 +166,7 @@ const i18n = {
       header: "À propos de moi",
       para1: "J'étudie les mathématiques pures.",
       para2:
-        'Je suis né à <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, dans le <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. Mes origines ancestrales se trouvent dans le <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">district de Li</a>. À neuf ans, ma famille a déménagé à <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, dans le <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, où j\'ai vécu jusqu\'à dix-sept ans. En 2024, je suis entré à l\'USTC par l\'examen d\'entrée à l\'université, et je vis maintenant à Hefei. J\'ai aussi vécu quelques semaines à Ningbo, Hangzhou et Shanghai — chaque endroit garde des souvenirs inoubliables.',
-      para3:
-        "Quand les maths ne me torturent pas, je suis un fan inconditionnel de Manchester City. Je vais régulièrement dans des festivals de musique. J'écrivais de la poésie moderne.",
+        'Je suis né à <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, dans le <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. Mes origines ancestrales se trouvent dans le <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">district de Li</a>. À neuf ans, ma famille a déménagé à <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, dans le <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, où j\'ai vécu jusqu\'à dix-sept ans. En 2024, je suis entré à l\'USTC par l\'examen d\'entrée à l\'université, et je vis maintenant à Hefei.',
     },
     research: {
       title: "Recherche – Borui HU 胡博睿",
