@@ -359,6 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       switchLang(code);
       card.classList.remove("open");
+      updateCatSurprised();
     });
     langsDiv.appendChild(btn);
   });
@@ -377,19 +378,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuWrapper.appendChild(card);
 
+  // Surprised cat when any menu is open
+  const siteCat = document.querySelector(".site-cat");
+  function updateCatSurprised() {
+    if (!siteCat) return;
+    const anyOpen = card.classList.contains("open") || navCard.classList.contains("open");
+    siteCat.classList.toggle("cat-surprised", anyOpen);
+  }
+
   // Toggle menu
   menuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     card.classList.toggle("open");
+    updateCatSurprised();
   });
 
   // Close menu on outside click
   document.addEventListener("click", (e) => {
     if (!card.contains(e.target) && !menuBtn.contains(e.target)) {
       card.classList.remove("open");
+      updateCatSurprised();
     }
     if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
       navCard.classList.remove("open");
+      updateCatSurprised();
     }
   });
 
@@ -432,12 +444,14 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
     card.classList.remove("open");
     navCard.classList.toggle("open");
+    updateCatSurprised();
   });
 
   // Close nav card on link click
   navCard.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       navCard.classList.remove("open");
+      updateCatSurprised();
     });
   });
 

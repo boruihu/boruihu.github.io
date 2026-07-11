@@ -369,6 +369,10 @@ footer {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 
+  position: relative;
+  left: -5px;
+  top: 6px;
+
   transition:
     color 0.25s ease,
     opacity 0.25s ease,
@@ -471,7 +475,8 @@ footer {
   animation: cat-blink 5.5s linear infinite;
 }
 
-.cat-eyes-annoyed {
+.cat-eyes-annoyed,
+.cat-eyes-surprised {
   display: none;
 }
 
@@ -732,6 +737,69 @@ footer {
 }
 
 /* ---------------------------------
+   State 4: surprised head-turn (both menus open)
+--------------------------------- */
+
+.site-cat.cat-surprised .cat-eyes-normal {
+  display: none;
+}
+
+.site-cat.cat-surprised .cat-eyes-surprised {
+  display: block;
+}
+
+.site-cat.cat-surprised .cat-head {
+  animation: cat-surprised-head 0.5s ease-out forwards;
+}
+
+.site-cat.cat-surprised .cat-tail {
+  animation: cat-surprised-tail 0.35s ease-out forwards;
+}
+
+.site-cat.cat-surprised .cat-ear-left {
+  animation: cat-surprised-ear-left 0.45s ease-out forwards;
+}
+
+.site-cat.cat-surprised .cat-ear-right {
+  animation: cat-surprised-ear-right 0.45s ease-out forwards;
+}
+
+.site-cat.cat-surprised .cat-body {
+  animation: none;
+}
+
+.site-cat.cat-surprised .cat-whiskers {
+  animation: cat-surprised-whiskers 0.45s ease-out forwards;
+}
+
+@keyframes cat-surprised-head {
+  0% { transform: translate(0, 0) rotate(0); }
+  55% { transform: translate(3px, -4px) rotate(15deg); }
+  75% { transform: translate(1px, -3px) rotate(10deg); }
+  100% { transform: translate(2px, -4px) rotate(13deg); }
+}
+
+@keyframes cat-surprised-tail {
+  0% { transform: rotate(-6deg); }
+  100% { transform: rotate(18deg); }
+}
+
+@keyframes cat-surprised-ear-left {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(-18deg); }
+}
+
+@keyframes cat-surprised-ear-right {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(16deg); }
+}
+
+@keyframes cat-surprised-whiskers {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(1px, -1px); }
+}
+
+/* ---------------------------------
    Mobile
 --------------------------------- */
 
@@ -759,13 +827,18 @@ footer {
 
   .site-cat.cat-annoyed .cat-eyes-normal,
   .site-cat.cat-walk .cat-eyes-normal,
-  .site-cat.cat-stretch .cat-eyes-normal {
+  .site-cat.cat-stretch .cat-eyes-normal,
+  .site-cat.cat-surprised .cat-eyes-normal {
     display: none;
   }
 
   .site-cat.cat-annoyed .cat-eyes-annoyed,
   .site-cat.cat-walk .cat-eyes-annoyed,
   .site-cat.cat-stretch .cat-eyes-annoyed {
+    display: block;
+  }
+
+  .site-cat.cat-surprised .cat-eyes-surprised {
     display: block;
   }
 }
