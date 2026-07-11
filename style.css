@@ -330,7 +330,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-left: 4rem;
+  padding-left: 13rem;
 }
 
 .bottom-bar-left {
@@ -738,7 +738,7 @@ footer {
 @media (max-width: 480px) {
   .bottom-bar {
     margin-top: 1rem;
-    padding-left: 1.5rem;
+    padding-left: 5rem;
   }
 
   .site-cat {
