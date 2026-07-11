@@ -91,8 +91,8 @@ const i18n = {
     },
     home: {
       title: "胡博睿的个人主页",
-      subtitle: "我是一名中国科学技术大学数学科学学院的大二学生。",
-      focus: "我的兴趣主要集中在分析和偏微分方程。",
+      subtitle: "我是中国科学技术大学数学科学学院的大二学生。",
+      focus: "我的专业是数学。",
       affiliation: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
       updated: "更新于 2026/07/11",
