@@ -378,12 +378,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuWrapper.appendChild(card);
 
-  // Surprised cat when any menu is open
+  // Surprised cat when any menu is open — re-triggers on every toggle
   const siteCat = document.querySelector(".site-cat");
   function updateCatSurprised() {
     if (!siteCat) return;
     const anyOpen = card.classList.contains("open") || navCard.classList.contains("open");
-    siteCat.classList.toggle("cat-surprised", anyOpen);
+    if (anyOpen) {
+      siteCat.classList.remove("cat-surprised");
+      void siteCat.offsetWidth;
+      siteCat.classList.add("cat-surprised");
+    } else {
+      siteCat.classList.remove("cat-surprised");
+    }
   }
 
   // Toggle menu
