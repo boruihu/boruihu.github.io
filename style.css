@@ -325,7 +325,7 @@ footer {
 
 .life-photo {
   display: block;
-  max-height: 240px;
+  max-height: 180px;
   width: auto;
   border-radius: 0.5rem;
 }
