@@ -343,7 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
   langsDiv.className = "menu-langs";
   const langs = [
     { code: "en", label: "EN" },
-    { code: "zh", label: "中文" },
+    { code: "zh", label: "中" },
     { code: "fr", label: "FR" },
   ];
   langs.forEach(({ code, label }) => {
