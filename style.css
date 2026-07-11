@@ -408,6 +408,15 @@ footer {
   font-size: 0.95rem;
 }
 
+.life-poem {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--dim);
+  margin-bottom: 1.2rem;
+  font-family: "PingFang TC", "Noto Serif TC", "PingFang SC", "Noto Serif SC", "Microsoft JhengHei", "Microsoft YaHei", serif;
+}
+
 .misc-list {
   list-style: none;
   padding: 0;

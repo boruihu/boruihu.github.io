@@ -66,6 +66,7 @@ const i18n = {
       title: "Life – Borui HU 胡博睿",
       header: "Life",
       content: 'My USTC iCourse Club account: <a href="https://icourse.club/user/12316" target="_blank" rel="noopener">icourse.club/user/12316</a>',
+      poem: "",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",
@@ -144,6 +145,7 @@ const i18n = {
       title: "生活 – 胡博睿",
       header: "生活",
       content: '我的中科大评课社区账号：<a href="https://icourse.club/user/12316" target="_blank" rel="noopener">icourse.club/user/12316</a>',
+      poem: '而我到底是誰 從哪裡來<br>又要到哪裡去 給我答案',
     },
     cv: {
       title: "简历 – 胡博睿",
@@ -222,6 +224,7 @@ const i18n = {
       title: "Vie – Borui HU 胡博睿",
       header: "Vie",
       content: 'Mon compte USTC iCourse Club : <a href="https://icourse.club/user/12316" target="_blank" rel="noopener">icourse.club/user/12316</a>',
+      poem: "",
     },
     cv: {
       title: "CV – Borui HU 胡博睿",
