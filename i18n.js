@@ -21,7 +21,7 @@ const i18n = {
     about: {
       title: "About – Borui HU 胡博睿",
       header: "About Me",
-      para1: "I study pure mathematics.",
+      para1: "I study pure mathematics, currently leaning toward analysis and PDE.",
       para2:
         'I was born in <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. My ancestral hometown is in <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">Li County</a>. At nine, my family moved to <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, where I lived until seventeen. In 2024, I entered USTC through the college entrance exam, so I now live in Hefei.',
     },
@@ -100,9 +100,9 @@ const i18n = {
     about: {
       title: "关于 – 胡博睿",
       header: "关于我",
-      para1: "我的方向是基础数学。",
+      para1: "我的方向是基础数学，目前偏向于分析与偏微分方程。",
       para2:
-        '我出生于<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>，祖籍在<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。',
+        '我是<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>人，祖籍在<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。',
     },
     research: {
       title: "研究 – 胡博睿",
@@ -179,7 +179,7 @@ const i18n = {
     about: {
       title: "À propos – Borui HU 胡博睿",
       header: "À propos de moi",
-      para1: "J'étudie les mathématiques pures.",
+      para1: "J'étudie les mathématiques pures, avec actuellement un penchant pour l'analyse et les EDP.",
       para2:
         'Je suis né à <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, dans le <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. Mes origines ancestrales se trouvent dans le <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">district de Li</a>. À neuf ans, ma famille a déménagé à <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, dans le <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, où j\'ai vécu jusqu\'à dix-sept ans. En 2024, je suis entré à l\'USTC par l\'examen d\'entrée à l\'université, et je vis maintenant à Hefei.',
     },
