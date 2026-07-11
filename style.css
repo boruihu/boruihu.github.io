@@ -316,6 +316,14 @@ footer {
   text-decoration: none;
 }
 
+.life-photo {
+  display: block;
+  width: 160px;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .misc-list {
   list-style: none;
   padding: 0;
