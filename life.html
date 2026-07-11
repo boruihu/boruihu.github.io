@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=10">
   <link rel="icon" href="favicon.svg">
 </head>
 <body>
@@ -72,14 +72,17 @@
 
       document.querySelectorAll(".life-photo").forEach((img) => {
         img.addEventListener("click", () => {
-          lbImg.src = img.src.replace("/thumb/", "/");
-          lbImg.alt = img.alt;
           const lang = getCaptionLang();
           const loc = img.dataset["loc" + lang.charAt(0).toUpperCase() + lang.slice(1)] || "";
           const desc = img.dataset["desc" + lang.charAt(0).toUpperCase() + lang.slice(1)] || "";
           lbCap.innerHTML = loc
             ? '<span class="cap-location">' + loc + '</span><span class="cap-desc">' + desc + '</span>'
             : "";
+          lbImg.style.opacity = "0";
+          lbImg.src = img.src.replace("/thumb/", "/");
+          lbImg.alt = img.alt;
+          const reveal = () => { lbImg.style.opacity = "1"; };
+          if (lbImg.complete) { reveal(); } else { lbImg.onload = reveal; }
           lb.classList.add("open");
         });
       });
