@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sophomore in Mathematics at USTC's School of Mathematical Sciences, focusing on partial differential equations (PDEs). Contact: boruihu2006[at]gmail.com">
   <title>Borui HU 胡博睿 | Homepage</title>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=8">
   <link rel="icon" href="favicon.svg">
   <script type="application/ld+json">
   {
@@ -48,6 +48,163 @@
     </footer>
   </main>
 
-  <script src="i18n.js?v=5"></script>
+  <div class="bottom-bar" data-no-translate>
+    <div class="bottom-bar-left">
+      <div
+        class="site-cat"
+        role="button"
+        tabindex="0"
+        aria-label="Click the cat"
+      >
+        <svg
+          viewBox="0 0 140 100"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <g class="cat-character">
+            <!-- Tail -->
+            <g class="cat-tail">
+              <path d="M98 68 C120 73 132 58 121 45 C114 37 106 42 111 49" />
+            </g>
+            <!-- Back leg -->
+            <g class="cat-back-leg">
+              <path class="cat-fill" d="M80 69 Q91 69 95 80 Q91 87 79 83 Z" />
+            </g>
+            <!-- Body -->
+            <g class="cat-body-group">
+              <ellipse class="cat-fill cat-body" cx="76" cy="67" rx="32" ry="18" />
+            </g>
+            <!-- Front legs -->
+            <g class="cat-front-legs">
+              <path class="cat-fill cat-front-leg cat-front-leg-left" d="M53 68 Q49 77 51 85 Q56 88 61 84 L62 69 Z" />
+              <path class="cat-fill cat-front-leg cat-front-leg-right" d="M65 69 Q63 79 66 86 Q71 89 75 84 L74 69 Z" />
+            </g>
+            <!-- Head -->
+            <g class="cat-head">
+              <!-- Ears -->
+              <path class="cat-fill cat-ear cat-ear-left" d="M27 38 L29 18 L43 32 Z" />
+              <path class="cat-fill cat-ear cat-ear-right" d="M47 32 L61 20 L59 40 Z" />
+              <circle class="cat-fill cat-face" cx="44" cy="48" r="20" />
+              <!-- Normal eyes -->
+              <g class="cat-eyes cat-eyes-normal">
+                <path d="M35 46 Q38 49 41 46" />
+                <path d="M48 46 Q51 49 54 46" />
+              </g>
+              <!-- Annoyed eyes -->
+              <g class="cat-eyes-annoyed">
+                <path d="M34 44 L41 47" />
+                <path d="M48 47 L55 44" />
+                <path d="M35 49 Q38 47 41 49" />
+                <path d="M48 49 Q51 47 54 49" />
+              </g>
+              <!-- Nose and mouth -->
+              <g class="cat-mouth">
+                <path d="M43 52 L45 52 L44 54 Z" />
+                <path d="M44 54 Q41 57 39 55" />
+                <path d="M44 54 Q47 57 49 55" />
+              </g>
+              <!-- Whiskers -->
+              <g class="cat-whiskers">
+                <path d="M31 52 L18 49" />
+                <path d="M31 55 L17 56" />
+                <path d="M57 52 L70 49" />
+                <path d="M57 55 L71 57" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="bottom-bar-right"></div>
+  </div>
+
+  <script src="i18n.js?v=8"></script>
+
+  <script>
+    (() => {
+      const cat = document.querySelector(".site-cat");
+
+      if (!cat) {
+        return;
+      }
+
+      const actions = [
+        { className: "cat-annoyed", duration: 1800 },
+        { className: "cat-walk", duration: 2200 },
+        { className: "cat-stretch", duration: 2600 },
+      ];
+
+      const reducedMotionQuery = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+      let isAnimating = false;
+      let cleanupTimer = null;
+      let previousAction = null;
+
+      function chooseRandomAction() {
+        let availableActions = actions;
+
+        if (previousAction && actions.length > 1) {
+          availableActions = actions.filter(
+            (action) => action.className !== previousAction
+          );
+        }
+
+        return availableActions[
+          Math.floor(Math.random() * availableActions.length)
+        ];
+      }
+
+      function clearActionClasses() {
+        actions.forEach((action) => {
+          cat.classList.remove(action.className);
+        });
+
+        cat.classList.remove("is-animating");
+      }
+
+      function playRandomAction() {
+        if (isAnimating) {
+          return;
+        }
+
+        const action = chooseRandomAction();
+        const duration = reducedMotionQuery.matches
+          ? 450
+          : action.duration;
+
+        isAnimating = true;
+        previousAction = action.className;
+
+        clearTimeout(cleanupTimer);
+        clearActionClasses();
+
+        void cat.offsetWidth;
+
+        cat.classList.add("is-animating", action.className);
+
+        cleanupTimer = window.setTimeout(() => {
+          clearActionClasses();
+          isAnimating = false;
+        }, duration);
+      }
+
+      cat.addEventListener("click", playRandomAction);
+
+      cat.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          playRandomAction();
+        }
+      });
+
+      reducedMotionQuery.addEventListener?.("change", () => {
+        clearTimeout(cleanupTimer);
+        clearActionClasses();
+        isAnimating = false;
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -333,7 +333,10 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn.className = "menu-btn";
   menuBtn.setAttribute("data-no-translate", "");
   menuBtn.textContent = "···";
-  document.body.appendChild(menuBtn);
+  const menuWrapper = document.createElement("div");
+  menuWrapper.className = "menu-wrapper";
+  menuWrapper.appendChild(menuBtn);
+  document.querySelector(".bottom-bar-right").appendChild(menuWrapper);
 
   // Menu card
   const card = document.createElement("div");
@@ -372,7 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
   darkBtn.addEventListener("click", toggleDark);
   card.appendChild(darkBtn);
 
-  document.body.appendChild(card);
+  menuWrapper.appendChild(card);
 
   // Toggle menu
   menuBtn.addEventListener("click", (e) => {
@@ -395,7 +398,10 @@ document.addEventListener("DOMContentLoaded", () => {
   navBtn.className = "menu-btn nav-btn";
   navBtn.setAttribute("data-no-translate", "");
   navBtn.textContent = "☰";
-  document.body.appendChild(navBtn);
+  const navWrapper = document.createElement("div");
+  navWrapper.className = "menu-wrapper";
+  navWrapper.appendChild(navBtn);
+  document.querySelector(".bottom-bar-right").appendChild(navWrapper);
 
   const navCard = document.createElement("div");
   navCard.className = "menu-card nav-card";
@@ -420,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navCard.appendChild(a);
   });
 
-  document.body.appendChild(navCard);
+  navWrapper.appendChild(navCard);
 
   navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
