@@ -202,6 +202,10 @@ footer {
   color: var(--fg);
 }
 
+.nav-btn svg {
+  display: block;
+}
+
 /* Menu card */
 .menu-card {
   position: absolute;

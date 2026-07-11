@@ -409,7 +409,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navBtn = document.createElement("div");
   navBtn.className = "menu-btn nav-btn";
   navBtn.setAttribute("data-no-translate", "");
-  navBtn.textContent = "☰";
+  navBtn.setAttribute("aria-label", "Navigation");
+  navBtn.innerHTML = '<svg viewBox="0 0 18 14" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="1" y1="2" x2="17" y2="2"/><line x1="1" y1="7" x2="17" y2="7"/><line x1="1" y1="12" x2="17" y2="12"/></svg>';
   const navWrapper = document.createElement("div");
   navWrapper.className = "menu-wrapper";
   navWrapper.appendChild(navBtn);
