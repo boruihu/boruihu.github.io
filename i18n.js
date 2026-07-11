@@ -7,6 +7,7 @@ const i18n = {
       ta: "TA",
       education: "Education",
       misc: "Misc",
+      life: "Life",
       cv: "CV",
     },
     home: {
@@ -61,6 +62,11 @@ const i18n = {
       item1: "USTC Mathematics Exam Papers",
       item2: "Mathematics Course Videos",
     },
+    life: {
+      title: "Life – Borui HU 胡博睿",
+      header: "Life",
+      content: 'My USTC iCourse Club account: <a href="https://icourse.club/user/12316" target="_blank" rel="noopener">icourse.club/user/12316</a>',
+    },
     cv: {
       title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
@@ -79,6 +85,7 @@ const i18n = {
       ta: "助教",
       education: "课程",
       misc: "杂项",
+      life: "生活",
       cv: "简历",
     },
     home: {
@@ -133,6 +140,11 @@ const i18n = {
       item1: "中国科大数学学科考试试卷",
       item2: "一些数学专业课程",
     },
+    life: {
+      title: "生活 – 胡博睿",
+      header: "生活",
+      content: '我的中科大评课社区账号：<a href="https://icourse.club/user/12316" target="_blank" rel="noopener">icourse.club/user/12316</a>',
+    },
     cv: {
       title: "简历 – 胡博睿",
       header: "简历",
@@ -151,6 +163,7 @@ const i18n = {
       ta: "Assistant",
       education: "Cours",
       misc: "Divers",
+      life: "Vie",
       cv: "CV",
     },
     home: {
@@ -205,6 +218,11 @@ const i18n = {
       item1: "Sujets d'examen de mathématiques de l'USTC",
       item2: "Cours de mathématiques en vidéo",
     },
+    life: {
+      title: "Vie – Borui HU 胡博睿",
+      header: "Vie",
+      content: 'Mon compte USTC iCourse Club : <a href="https://icourse.club/user/12316" target="_blank" rel="noopener">icourse.club/user/12316</a>',
+    },
     cv: {
       title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
@@ -224,6 +242,7 @@ function getPage() {
   if (path.endsWith("education.html")) return "education";
   if (path.endsWith("cv.html")) return "cv";
   if (path.endsWith("misc.html")) return "misc";
+  if (path.endsWith("life.html")) return "life";
   return "home";
 }
 
@@ -428,6 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { href: "ta.html", key: "ta" },
     { href: "education.html", key: "education" },
     { href: "misc.html", key: "misc" },
+    { href: "life.html", key: "life" },
     { href: "CV_HBr.pdf", key: "cv" },
   ];
 
