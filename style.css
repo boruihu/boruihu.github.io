@@ -163,6 +163,9 @@ a:hover {
 /* Footer */
 footer {
   margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .updated {
@@ -323,18 +326,13 @@ footer {
   line-height: 1.5;
 }
 
-/* Bottom bar: cat on left, menu buttons on right */
+/* Bottom bar: menu buttons on right */
 .bottom-bar {
   max-width: 640px;
   margin: 1.5rem auto 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 13rem;
-}
-
-.bottom-bar-left {
-  flex: none;
 }
 
 .bottom-bar-right {
@@ -343,7 +341,6 @@ footer {
   gap: 0.5rem;
   position: relative;
   z-index: 100;
-  padding-left: 1rem;
 }
 
 .menu-wrapper {
@@ -360,7 +357,8 @@ footer {
 
 /* Decorative interactive cat */
 .site-cat {
-  width: clamp(72px, 7vw, 96px);
+  width: 52px;
+  flex-shrink: 0;
 
   color: var(--dim);
   opacity: 0.72;
@@ -368,10 +366,6 @@ footer {
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-
-  position: relative;
-  left: -5px;
-  top: 6px;
 
   transition:
     color 0.25s ease,
@@ -806,11 +800,10 @@ footer {
 @media (max-width: 480px) {
   .bottom-bar {
     margin-top: 1rem;
-    padding-left: 5rem;
   }
 
   .site-cat {
-    width: 64px;
+    width: 44px;
   }
 }
 
