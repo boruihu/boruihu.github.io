@@ -342,6 +342,21 @@ function updateDarkBtn() {
 
 // Init
 document.addEventListener("DOMContentLoaded", () => {
+  // Create bottom bar if it doesn't exist (non-homepage pages)
+  let bottomBarRight = document.querySelector(".bottom-bar-right");
+  if (!bottomBarRight) {
+    const bottomBar = document.createElement("div");
+    bottomBar.className = "bottom-bar";
+    bottomBar.setAttribute("data-no-translate", "");
+    const left = document.createElement("div");
+    left.className = "bottom-bar-left";
+    bottomBarRight = document.createElement("div");
+    bottomBarRight.className = "bottom-bar-right";
+    bottomBar.appendChild(left);
+    bottomBar.appendChild(bottomBarRight);
+    document.body.appendChild(bottomBar);
+  }
+
   // Menu button
   const menuBtn = document.createElement("div");
   menuBtn.className = "menu-btn";
@@ -350,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuWrapper = document.createElement("div");
   menuWrapper.className = "menu-wrapper";
   menuWrapper.appendChild(menuBtn);
-  document.querySelector(".bottom-bar-right").appendChild(menuWrapper);
+  bottomBarRight.appendChild(menuWrapper);
 
   // Menu card
   const card = document.createElement("div");
@@ -434,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navWrapper = document.createElement("div");
   navWrapper.className = "menu-wrapper";
   navWrapper.appendChild(navBtn);
-  document.querySelector(".bottom-bar-right").appendChild(navWrapper);
+  bottomBarRight.appendChild(navWrapper);
 
   const navCard = document.createElement("div");
   navCard.className = "menu-card nav-card";
