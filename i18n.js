@@ -35,7 +35,7 @@ const i18n = {
       title: "TA – Borui HU 胡博睿",
       header: "2026 Fall",
       content:
-        "I am serving as a teaching assistant for 001122.01 Partial Differential Equations, instructed by Prof. Junyan Zhang, in the 2026 Fall semester. Students can submit electronic homework assignments to <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Further information can be found on the <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">course page</a>.",
+        "I am serving as a teaching assistant for 001122.01 Partial Differential Equations at USTC, instructed by Prof. Junyan Zhang, in the 2026 Fall semester. Students can submit electronic homework assignments to <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Further information can be found on the <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">course page</a>.",
     },
     education: {
       title: "Education – Borui HU 胡博睿",
@@ -71,7 +71,7 @@ const i18n = {
     cv: {
       title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
-      content: "Not yet available.",
+      content: "Download PDF (English &amp; Chinese)",
     },
     footer: {
       back: "← Back",
@@ -114,7 +114,7 @@ const i18n = {
       title: "助教 – 胡博睿",
       header: "2026年秋季学期",
       content:
-        "本人担任2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
+        "本人担任中国科学技术大学2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
     },
     education: {
       title: "课程 – 胡博睿",
@@ -150,7 +150,7 @@ const i18n = {
     cv: {
       title: "简历 – 胡博睿",
       header: "简历",
-      content: "暂未开放。",
+      content: "下载 PDF（英文 &amp; 中文）",
     },
     footer: {
       back: "← 返回",
@@ -193,7 +193,7 @@ const i18n = {
       title: "Assistant – Borui HU 胡博睿",
       header: "Automne 2026",
       content:
-        "Je suis assistant d'enseignement pour le cours 001122.01 Équations aux Dérivées Partielles, dispensé par le Prof. Junyan Zhang, au semestre d'automne 2026. Les étudiants peuvent soumettre leurs devoirs électroniques à <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Plus d'informations sont disponibles sur la <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">page du cours</a>.",
+        "Je suis assistant d'enseignement à l'USTC pour le cours 001122.01 Équations aux Dérivées Partielles, dispensé par le Prof. Junyan Zhang, au semestre d'automne 2026. Les étudiants peuvent soumettre leurs devoirs électroniques à <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Plus d'informations sont disponibles sur la <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">page du cours</a>.",
     },
     education: {
       title: "Cours – Borui HU 胡博睿",
@@ -229,7 +229,7 @@ const i18n = {
     cv: {
       title: "CV – Borui HU 胡博睿",
       header: "Curriculum Vitae",
-      content: "Pas encore disponible.",
+      content: "Télécharger le PDF (anglais &amp; chinois)",
     },
     footer: {
       back: "← Retour",
