@@ -16,7 +16,7 @@ const i18n = {
       focus: "Focus: Analysis and PDE",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
-      updated: "Updated 2026/07/11",
+      updated: "Updated 2026/07/17",
     },
     about: {
       title: "About – Borui HU 胡博睿",
@@ -29,7 +29,7 @@ const i18n = {
       title: "Research – Borui HU 胡博睿",
       header: "Research",
       content:
-        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined. I am also attending the fluid PDE seminar organized by Prof. Zhang.",
+        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined. I am also attending the fluid PDE seminar organized by Prof. Zhang.<br><br>Meanwhile, I am also interested in optimization theory. I am currently exploring it on my own.",
     },
     ta: {
       title: "TA – Borui HU 胡博睿",
@@ -95,7 +95,7 @@ const i18n = {
       focus: "我的专业是数学。",
       affiliation: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
-      updated: "更新于 2026/07/11",
+      updated: "更新于 2026/07/17",
     },
     about: {
       title: "关于 – 胡博睿",
@@ -108,7 +108,7 @@ const i18n = {
       title: "研究 – 胡博睿",
       header: "研究",
       content:
-        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。我也正在参加章老师举行的流体PDE讨论班。",
+        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。我也正在参加章老师举行的流体PDE讨论班。<br><br>同时，我对最优化理论也抱有浓厚兴趣，目前正在自行进行探索。",
     },
     ta: {
       title: "助教 – 胡博睿",
@@ -174,7 +174,7 @@ const i18n = {
       focus: "Spécialisation : analyse et EDP",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
-      updated: "Mis à jour le 11/07/2026",
+      updated: "Mis à jour le 17/07/2026",
     },
     about: {
       title: "À propos – Borui HU 胡博睿",
@@ -187,7 +187,7 @@ const i18n = {
       title: "Recherche – Borui HU 胡博睿",
       header: "Recherche",
       content:
-        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer. Je participe également au séminaire sur les EDP des fluides organisé par le Prof. Zhang.",
+        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer. Je participe également au séminaire sur les EDP des fluides organisé par le Prof. Zhang.<br><br>Par ailleurs, je m'intéresse aussi à la théorie de l'optimisation, que j'explore actuellement par moi-même.",
     },
     ta: {
       title: "Assistant – Borui HU 胡博睿",
