@@ -102,7 +102,7 @@ const i18n = {
       header: "关于我",
       para1: "我的方向是基础数学，目前偏向于分析与偏微分方程。<br>我对最优化理论也很感兴趣。",
       para2:
-        '我是<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>人，祖籍在<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。',
+        '我是<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>人，祖籍在湖南<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考上了科大，所以我现在住在合肥。',
     },
     research: {
       title: "研究 – 胡博睿",
