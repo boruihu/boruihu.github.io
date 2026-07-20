@@ -13,7 +13,7 @@
 }
 
 :root {
-  --bg: #6CABDD;
+  --bg: #faf9f7;
   --fg: #1a1a1e;
   --dim: #888;
   --accent: #2563eb;
@@ -185,7 +185,7 @@ footer {
   height: 2.25rem;
   border-radius: 50%;
   border: 1px solid rgba(136, 136, 136, 0.25);
-  background: rgba(108, 171, 221, 0.88);
+  background: rgba(250, 249, 247, 0.88);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   cursor: pointer;
   display: flex;
@@ -217,7 +217,7 @@ footer {
   gap: 0.2rem;
   padding: 0.2rem;
   border-radius: 0.7rem;
-  background: rgba(108, 171, 221, 0.92);
+  background: rgba(250, 249, 247, 0.92);
   border: 1px solid rgba(136, 136, 136, 0.25);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   align-items: center;
