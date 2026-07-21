@@ -13,7 +13,7 @@ const i18n = {
     home: {
       title: "Borui HU 胡博睿 | Homepage",
       subtitle: "Sophomore in Mathematics",
-      focus: "Focus: Mathematics",
+      focus: "Major: Mathematics",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
       updated: "Updated 2026/07/17",
