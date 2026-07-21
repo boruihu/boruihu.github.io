@@ -171,7 +171,7 @@ const i18n = {
     home: {
       title: "Borui HU 胡博睿 | Accueil",
       subtitle: "Étudiant en 2e année de mathématiques",
-      focus: "Spécialisation : mathématiques",
+      focus: "Spécialité : mathématiques",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
       updated: "Mis à jour le 17/07/2026",
