@@ -13,7 +13,7 @@ const i18n = {
     home: {
       title: "Borui HU 胡博睿 | Homepage",
       subtitle: "Sophomore in Mathematics",
-      focus: "Focus: Analysis and PDE",
+      focus: "Focus: Mathematics",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
       updated: "Updated 2026/07/17",
@@ -171,7 +171,7 @@ const i18n = {
     home: {
       title: "Borui HU 胡博睿 | Accueil",
       subtitle: "Étudiant en 2e année de mathématiques",
-      focus: "Spécialisation : analyse et EDP",
+      focus: "Spécialisation : mathématiques",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
       updated: "Mis à jour le 17/07/2026",
