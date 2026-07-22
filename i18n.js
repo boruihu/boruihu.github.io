@@ -21,7 +21,7 @@ const i18n = {
     about: {
       title: "About – Borui HU 胡博睿",
       header: "About Me",
-      para1: "I study pure mathematics, currently leaning toward analysis and PDE.<br>I am also interested in optimization theory.",
+      para1: "I study pure mathematics, currently leaning toward analysis and PDE.",
       para2:
         'I was born in <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. My ancestral hometown is in <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">Li County</a>. At nine, my family moved to <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, where I lived until seventeen. In 2024, I entered USTC through the college entrance exam, so I now live in Hefei.',
     },
@@ -29,7 +29,7 @@ const i18n = {
       title: "Research – Borui HU 胡博睿",
       header: "Research",
       content:
-        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined. I am also attending the fluid PDE seminar organized by Prof. Zhang.<br>Meanwhile, I am also interested in optimization theory. I am currently exploring it on my own.",
+        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined. I am also attending the fluid PDE seminar organized by Prof. Zhang.",
     },
     ta: {
       title: "TA – Borui HU 胡博睿",
@@ -100,7 +100,7 @@ const i18n = {
     about: {
       title: "关于 – 胡博睿",
       header: "关于我",
-      para1: "我的方向是基础数学，目前偏向于分析与偏微分方程。<br>我对最优化理论也很感兴趣。",
+      para1: "我的方向是基础数学，目前偏向于分析与偏微分方程。",
       para2:
         '我是<a href="https://en.wikipedia.org/wiki/Hunan">湖南</a><a href="https://en.wikipedia.org/wiki/Changsha">长沙</a>人，祖籍在湖南<a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">澧县</a>。九岁时，我和家人搬到<a href="https://en.wikipedia.org/wiki/Guangxi">广西</a><a href="https://en.wikipedia.org/wiki/Guilin">桂林</a>，在那里一直住到了十七岁。两年前，我考到了<a href="https://math.ustc.edu.cn/">科大数院</a>，所以我现在住在<a href="https://en.wikipedia.org/wiki/Hefei">合肥</a>。',
     },
@@ -108,7 +108,7 @@ const i18n = {
       title: "研究 – 胡博睿",
       header: "研究",
       content:
-        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。我也正在参加章老师举行的流体PDE讨论班。<br>同时，我对最优化理论也抱有浓厚兴趣，目前正在自行进行探索。",
+        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。我也正在参加章老师举行的流体PDE讨论班。",
     },
     ta: {
       title: "助教 – 胡博睿",
@@ -179,7 +179,7 @@ const i18n = {
     about: {
       title: "À propos – Borui HU 胡博睿",
       header: "À propos de moi",
-      para1: "J'étudie les mathématiques pures, avec actuellement un penchant pour l'analyse et les EDP.<br>Je m'intéresse aussi à la théorie de l'optimisation.",
+      para1: "J'étudie les mathématiques pures, avec actuellement un penchant pour l'analyse et les EDP.",
       para2:
         'Je suis né à <a href="https://en.wikipedia.org/wiki/Changsha">Changsha</a>, dans le <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a>. Mes origines ancestrales se trouvent dans le <a href="https://en.wikipedia.org/wiki/Li_County,_Hunan">district de Li</a>. À neuf ans, ma famille a déménagé à <a href="https://en.wikipedia.org/wiki/Guilin">Guilin</a>, dans le <a href="https://en.wikipedia.org/wiki/Guangxi">Guangxi</a>, où j\'ai vécu jusqu\'à dix-sept ans. En 2024, je suis entré à l\'USTC par l\'examen d\'entrée à l\'université, et je vis maintenant à Hefei.',
     },
@@ -187,7 +187,7 @@ const i18n = {
       title: "Recherche – Borui HU 胡博睿",
       header: "Recherche",
       content:
-        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer. Je participe également au séminaire sur les EDP des fluides organisé par le Prof. Zhang.<br>Par ailleurs, je m'intéresse aussi à la théorie de l'optimisation, que j'explore actuellement par moi-même.",
+        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer. Je participe également au séminaire sur les EDP des fluides organisé par le Prof. Zhang.",
     },
     ta: {
       title: "Assistant – Borui HU 胡博睿",
