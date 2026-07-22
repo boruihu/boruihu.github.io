@@ -16,7 +16,7 @@ const i18n = {
       focus: "Major: Mathematics",
       affiliation: "School of Mathematical Sciences<br>University of Science and Technology of China",
       contact: "Contact: boruihu2006[at]gmail.com",
-      updated: "Updated 2026/07/17",
+      updated: "Updated 2026/07/22",
     },
     about: {
       title: "About – Borui HU 胡博睿",
@@ -95,7 +95,7 @@ const i18n = {
       focus: "我的专业是数学。",
       affiliation: "",
       contact: "联系方式：boruihu2006[at]gmail.com",
-      updated: "更新于 2026/07/17",
+      updated: "更新于 2026/07/22",
     },
     about: {
       title: "关于 – 胡博睿",
@@ -174,7 +174,7 @@ const i18n = {
       focus: "Spécialité : mathématiques",
       affiliation: "École des sciences mathématiques<br>Université des sciences et technologies de Chine",
       contact: "Contact : boruihu2006[at]gmail.com",
-      updated: "Mis à jour le 17/07/2026",
+      updated: "Mis à jour le 22/07/2026",
     },
     about: {
       title: "À propos – Borui HU 胡博睿",
