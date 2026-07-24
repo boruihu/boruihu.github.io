@@ -37,7 +37,7 @@ const i18n = {
       content:
         "I am serving as a teaching assistant for 001122.01 Partial Differential Equations at USTC, instructed by Prof. Junyan Zhang, in the 2026 Fall semester. Students can submit electronic homework assignments to <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Further information can be found on the <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">course page</a>.",
       evans:
-        'Course resource: <a href="Evans-Chapter-2-Solutions.pdf" download>Download the solutions to Chapter 2 of Evans</a> (PDF).',
+        'Course resource: <a href="Evans-Chapter-2-Solutions.pdf" target="_blank" rel="noopener">Evans Chapter 2 solutions</a> (PDF).',
     },
     education: {
       title: "Education – Borui HU 胡博睿",
@@ -118,7 +118,7 @@ const i18n = {
       content:
         "本人担任中国科学技术大学2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
       evans:
-        '课程资料：<a href="Evans-Chapter-2-Solutions.pdf" download>下载 Evans 第二章习题答案</a>（PDF）。',
+        '课程资料：<a href="Evans-Chapter-2-Solutions.pdf" target="_blank" rel="noopener">Evans 第二章习题答案</a>（PDF）。',
     },
     education: {
       title: "课程 – 胡博睿",
@@ -199,7 +199,7 @@ const i18n = {
       content:
         "Je suis assistant d'enseignement à l'USTC pour le cours 001122.01 Équations aux Dérivées Partielles, dispensé par le Prof. Junyan Zhang, au semestre d'automne 2026. Les étudiants peuvent soumettre leurs devoirs électroniques à <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Plus d'informations sont disponibles sur la <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">page du cours</a>.",
       evans:
-        'Ressource du cours : <a href="Evans-Chapter-2-Solutions.pdf" download>Télécharger les solutions du chapitre 2 d’Evans</a> (PDF).',
+        'Ressource du cours : <a href="Evans-Chapter-2-Solutions.pdf" target="_blank" rel="noopener">Solutions du chapitre 2 d’Evans</a> (PDF).',
     },
     education: {
       title: "Cours – Borui HU 胡博睿",
