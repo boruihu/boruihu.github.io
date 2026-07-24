@@ -67,6 +67,35 @@
         font-size: 0.9rem;
       }
     }
+
+    .course-status {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.15em 0.5em;
+      border-radius: 999px;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+
+    .course-status.completed {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .course-status.planned {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    :root.dark .course-status.completed {
+      background: #14532d;
+      color: #bbf7d0;
+    }
+
+    :root.dark .course-status.planned {
+      background: #451a03;
+      color: #fde68a;
+    }
   </style>
 </head>
 <body>
@@ -76,10 +105,10 @@
     </header>
 
     <section>
-      <p class="fade" data-i18n="education.desc">Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.</p>
+      <p class="fade" data-i18n="education.desc">Mathematics major courses at USTC, excluding Mathematical Analysis and Linear Algebra.</p>
 
       <div class="layer layer1">
-        <h2 class="layer-header" data-i18n="education.semester1">Sophomore Fall</h2>
+        <h2 class="layer-header"><span data-i18n="education.semester1">Sophomore Fall</span> <span class="course-status completed" data-i18n="education.completed">Completed</span></h2>
         <ul class="course-list">
           <li data-i18n="education.course0">Probability Theory</li>
           <li data-i18n="education.course1">Ordinary Differential Equations</li>
@@ -88,7 +117,7 @@
       </div>
 
       <div class="layer layer2">
-        <h2 class="layer-header" data-i18n="education.semester2">Sophomore Spring</h2>
+        <h2 class="layer-header"><span data-i18n="education.semester2">Sophomore Spring</span> <span class="course-status completed" data-i18n="education.completed">Completed</span></h2>
         <ul class="course-list">
           <li data-i18n="education.course3">Real Analysis</li>
           <li data-i18n="education.course4">Complex Analysis</li>
@@ -97,7 +126,7 @@
       </div>
 
       <div class="layer layer3">
-        <h2 class="layer-header" data-i18n="education.semester3">Junior Fall</h2>
+        <h2 class="layer-header"><span data-i18n="education.semester3">Junior Fall</span> <span class="course-status planned" data-i18n="education.planned">Planned</span></h2>
         <ul class="course-list">
           <li data-i18n="education.course6">Functional Analysis</li>
           <li data-i18n="education.course7">Differential Geometry</li>

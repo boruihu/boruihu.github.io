@@ -41,7 +41,9 @@ const i18n = {
     },
     education: {
       title: "Education – Borui HU 胡博睿",
-      desc: "Mathematics major courses taken at USTC, excluding Mathematical Analysis and Linear Algebra.",
+      desc: "Mathematics major courses at USTC, excluding Mathematical Analysis and Linear Algebra.",
+      completed: "Completed",
+      planned: "Planned",
       course0: "Probability Theory",
       course1: "Ordinary Differential Equations",
       course2: "Partial Differential Equations",
@@ -122,7 +124,9 @@ const i18n = {
     },
     education: {
       title: "课程 – 胡博睿",
-      desc: "在中国科学技术大学修读的数学专业课（不含数学分析与线性代数）。",
+      desc: "在中国科学技术大学的数学专业课（不含数学分析与线性代数）。",
+      completed: "已修",
+      planned: "待修",
       course0: "概率论",
       course1: "常微分方程",
       course2: "偏微分方程",
@@ -203,7 +207,9 @@ const i18n = {
     },
     education: {
       title: "Cours – Borui HU 胡博睿",
-      desc: "Cours de spécialisation en mathématiques suivis à l'USTC, à l'exclusion de l'Analyse Mathématique et de l'Algèbre Linéaire.",
+      desc: "Cours de spécialisation en mathématiques à l'USTC, à l'exclusion de l'Analyse Mathématique et de l'Algèbre Linéaire.",
+      completed: "Terminé",
+      planned: "Prévu",
       course0: "Théorie des probabilités",
       course1: "Équations différentielles ordinaires",
       course2: "Équations aux dérivées partielles",
