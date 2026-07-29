@@ -28,13 +28,21 @@ const i18n = {
     research: {
       title: "Research – Borui HU 胡博睿",
       header: "Research",
-      content:
-        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined. I am also attending the fluid PDE seminar organized by Prof. Zhang.",
+      proj1_title: "Undergraduate Research Project",
+      proj1_date: "2026 Fall – Present",
+      proj1_content:
+        "I am currently preparing to conduct an undergraduate research project on PDEs under the supervision of <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. The project is still at a preliminary stage and the details are yet to be determined.",
+      proj2_title: "Fluid PDE Seminar",
+      proj2_date: "2026 Fall – Present",
+      proj2_content:
+        "I am attending the fluid PDE seminar organized by <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>.",
     },
     ta: {
       title: "TA – Borui HU 胡博睿",
-      header: "2026 Fall",
-      content:
+      header: "Teaching Assistant",
+      course1_title: "Partial Differential Equations",
+      course1_date: "2026 Fall",
+      course1_content:
         "I am serving as a teaching assistant for 001122.01 Partial Differential Equations at USTC, instructed by Prof. Junyan Zhang, in the 2026 Fall semester. Students can submit electronic homework assignments to <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Further information can be found on the <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">course page</a>.",
       evans:
         '<a href="Evans-Chapter-2-Solutions.pdf" target="_blank" rel="noopener">Evans Chapter 2 solutions</a>',
@@ -111,13 +119,21 @@ const i18n = {
     research: {
       title: "研究 – 胡博睿",
       header: "研究",
-      content:
-        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。我也正在参加章老师举行的流体PDE讨论班。",
+      proj1_title: "大学生研究项目",
+      proj1_date: "2026年秋季 – 至今",
+      proj1_content:
+        "我将在<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>的指导下进行一项大学生研究项目。不过这段大研目前仍处于初步阶段，细节尚未确定。",
+      proj2_title: "流体PDE讨论班",
+      proj2_date: "2026年秋季 – 至今",
+      proj2_content:
+        "我正在参加<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>组织的流体PDE讨论班。",
     },
     ta: {
       title: "助教 – 胡博睿",
-      header: "2026年秋季学期",
-      content:
+      header: "助教",
+      course1_title: "偏微分方程",
+      course1_date: "2026年秋季学期",
+      course1_content:
         "本人担任中国科学技术大学2026年秋季学期 001122.01 偏微分方程（授课教师：章俊彦）课程助教，作业电子版请提交至 <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>，详情请见课程<a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">主页</a>。",
       evans:
         '<a href="Evans-Chapter-2-Solutions.pdf" target="_blank" rel="noopener">Evans 第二章习题答案</a>',
@@ -194,13 +210,21 @@ const i18n = {
     research: {
       title: "Recherche – Borui HU 胡博睿",
       header: "Recherche",
-      content:
-        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer. Je participe également au séminaire sur les EDP des fluides organisé par le Prof. Zhang.",
+      proj1_title: "Projet de recherche",
+      proj1_date: "Automne 2026 – Présent",
+      proj1_content:
+        "Je me prépare actuellement à mener un projet de recherche sur les EDP sous la supervision de <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>. Le projet est encore à un stade préliminaire et les détails restent à déterminer.",
+      proj2_title: "Séminaire EDP des fluides",
+      proj2_date: "Automne 2026 – Présent",
+      proj2_content:
+        "Je participe au séminaire sur les EDP des fluides organisé par le <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>.",
     },
     ta: {
       title: "Assistant – Borui HU 胡博睿",
-      header: "Automne 2026",
-      content:
+      header: "Assistant d'enseignement",
+      course1_title: "Équations aux Dérivées Partielles",
+      course1_date: "Automne 2026",
+      course1_content:
         "Je suis assistant d'enseignement à l'USTC pour le cours 001122.01 Équations aux Dérivées Partielles, dispensé par le Prof. Junyan Zhang, au semestre d'automne 2026. Les étudiants peuvent soumettre leurs devoirs électroniques à <a href=\"mailto:pdeyyan@126.com\">pdeyyan@126.com</a>. Plus d'informations sont disponibles sur la <a href=\"https://www.zhangjy9610.me/2026F-PDE1.html\">page du cours</a>.",
       evans:
         '<a href="Evans-Chapter-2-Solutions.pdf" target="_blank" rel="noopener">Solutions du chapitre 2 d’Evans</a>',
@@ -513,5 +537,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Click name to go home
   document.querySelector("h1")?.addEventListener("click", () => {
     location.href = "/";
+  });
+
+  // Collapsible experience blocks
+  document.querySelectorAll(".exp-header").forEach((header) => {
+    header.addEventListener("click", () => {
+      header.parentElement.classList.toggle("open");
+    });
   });
 });

@@ -923,6 +923,100 @@ footer {
    Reduced motion
 --------------------------------- */
 
+/* Collapsible experience blocks */
+.exp-block {
+  margin-top: 1.25rem;
+}
+
+.exp-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--fg);
+  cursor: pointer;
+  padding: 0.4rem 0;
+  text-align: left;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.exp-title {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.exp-header:hover .exp-title {
+  color: var(--accent);
+}
+
+.exp-meta {
+  color: var(--dim);
+  font-size: 0.82rem;
+  margin-left: auto;
+  white-space: nowrap;
+  padding-left: 0.5rem;
+}
+
+.exp-arrow {
+  font-size: 0.65rem;
+  color: var(--dim);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.exp-block.open .exp-arrow {
+  transform: rotate(180deg);
+}
+
+.exp-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.exp-block.open .exp-body {
+  grid-template-rows: 1fr;
+}
+
+.exp-inner {
+  overflow: hidden;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--dim);
+  opacity: 0.6;
+  transition: opacity 0.35s ease;
+}
+
+.exp-block.open .exp-inner {
+  opacity: 1;
+}
+
+.exp-inner p {
+  padding: 0.4rem 0 0.2rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.exp-inner a {
+  color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .exp-title {
+    font-size: 0.9rem;
+  }
+  .exp-meta {
+    font-size: 0.75rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-cat,
   .site-cat * {
