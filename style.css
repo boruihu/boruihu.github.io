@@ -206,11 +206,11 @@ footer {
   display: block;
 }
 
-/* Menu card — opens upward as horizontal bar */
+/* Menu card — opens to the right, bottom-aligned */
 .menu-card {
   position: absolute;
-  left: 0;
-  bottom: calc(100% + 0.6rem);
+  left: calc(100% + 0.6rem);
+  bottom: 0;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -222,14 +222,14 @@ footer {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(6px);
+  transform: translateX(-6px);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .menu-card.open {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .menu-divider {
@@ -242,6 +242,7 @@ footer {
 .nav-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.1rem;
 }
 
@@ -913,11 +914,16 @@ footer {
 
   .menu-card {
     left: 0;
+    right: auto;
     bottom: calc(100% + 0.5rem);
+    transform: translateY(6px);
+  }
+
+  .menu-card.open {
+    transform: translateY(0);
   }
 
   .nav-links {
-    flex-wrap: wrap;
     gap: 0.05rem;
   }
 
