@@ -412,6 +412,10 @@ document.addEventListener("DOMContentLoaded", () => {
   navCard.className = "menu-card nav-card";
   navCard.setAttribute("data-no-translate", "");
 
+  // Nav links row
+  const navLinks = document.createElement("div");
+  navLinks.className = "nav-links";
+
   const navPages = [
     { href: "/", key: "home" },
     { href: "about.html", key: "about" },
@@ -429,8 +433,10 @@ document.addEventListener("DOMContentLoaded", () => {
     a.className = "nav-menu-link";
     a.setAttribute("data-i18n-nav", key);
     a.textContent = key;
-    navCard.appendChild(a);
+    navLinks.appendChild(a);
   });
+
+  navCard.appendChild(navLinks);
 
   // Divider
   const divider = document.createElement("div");
