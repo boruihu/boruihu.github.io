@@ -206,13 +206,13 @@ footer {
   display: block;
 }
 
-/* Menu card */
+/* Menu card — opens to the right */
 .menu-card {
   position: absolute;
-  bottom: calc(100% + 0.5rem);
-  right: 0;
+  left: calc(100% + 0.6rem);
+  bottom: 0;
   z-index: 999;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0.2rem;
   padding: 0.2rem;
@@ -221,10 +221,17 @@ footer {
   border: 1px solid rgba(136, 136, 136, 0.25);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
 }
 
 .menu-card.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
 }
 
 .menu-divider {
@@ -425,39 +432,28 @@ footer {
   line-height: 1.5;
 }
 
-/* Bottom bar: cat on left, menu buttons on right */
+/* Bottom bar: cat and menu on the left */
 .bottom-bar {
   max-width: 640px;
   margin: 1.5rem auto 0;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
-  padding-left: 13rem;
 }
 
 .bottom-bar-left {
-  flex: none;
-}
-
-.bottom-bar-right {
-  flex: none;
   display: flex;
+  align-items: flex-end;
   gap: 0.5rem;
   position: relative;
   z-index: 100;
-  padding-left: 1rem;
+}
+
+.bottom-bar-right {
+  display: none;
 }
 
 .menu-wrapper {
   position: relative;
-}
-
-.menu-wrapper:first-child {
-  order: 2;
-}
-
-.menu-wrapper:last-child {
-  order: 1;
 }
 
 /* Decorative interactive cat */
@@ -908,11 +904,21 @@ footer {
 @media (max-width: 480px) {
   .bottom-bar {
     margin-top: 1rem;
-    padding-left: 5rem;
   }
 
   .site-cat {
     width: 64px;
+  }
+
+  .menu-card {
+    left: auto;
+    right: 0;
+    bottom: calc(100% + 0.5rem);
+    transform: translateY(6px);
+  }
+
+  .menu-card.open {
+    transform: translateY(0);
   }
 }
 
