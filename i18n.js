@@ -466,15 +466,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navWrapper.appendChild(navCard);
 
+  // Surprised cat when nav menu opens
+  const siteCat = document.querySelector(".site-cat");
+  function updateCatSurprised() {
+    if (!siteCat) return;
+    if (navCard.classList.contains("open")) {
+      siteCat.classList.remove("cat-surprised");
+      void siteCat.offsetWidth;
+      siteCat.classList.add("cat-surprised");
+    } else {
+      siteCat.classList.remove("cat-surprised");
+    }
+  }
+
   navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     navCard.classList.toggle("open");
+    updateCatSurprised();
   });
 
   // Close nav card on outside click
   document.addEventListener("click", (e) => {
     if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
       navCard.classList.remove("open");
+      updateCatSurprised();
     }
   });
 
@@ -482,6 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navCard.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       navCard.classList.remove("open");
+      updateCatSurprised();
     });
   });
 
