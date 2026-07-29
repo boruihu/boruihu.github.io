@@ -432,13 +432,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Divider
-  const divider1 = document.createElement("div");
-  divider1.className = "menu-divider";
-  navCard.appendChild(divider1);
+  const divider = document.createElement("div");
+  divider.className = "menu-divider";
+  navCard.appendChild(divider);
 
-  // Language buttons
-  const langsDiv = document.createElement("div");
-  langsDiv.className = "menu-langs";
+  // Language + dark mode row
+  const utilsDiv = document.createElement("div");
+  utilsDiv.className = "menu-utils";
+
   const langs = [
     { code: "en", label: "EN" },
     { code: "zh", label: "中" },
@@ -453,20 +454,15 @@ document.addEventListener("DOMContentLoaded", () => {
       switchLang(code);
       navCard.classList.remove("open");
     });
-    langsDiv.appendChild(btn);
+    utilsDiv.appendChild(btn);
   });
-  navCard.appendChild(langsDiv);
 
-  // Divider
-  const divider2 = document.createElement("div");
-  divider2.className = "menu-divider";
-  navCard.appendChild(divider2);
-
-  // Dark mode toggle
   const darkBtn = document.createElement("button");
   darkBtn.className = "dark-btn";
   darkBtn.addEventListener("click", toggleDark);
-  navCard.appendChild(darkBtn);
+  utilsDiv.appendChild(darkBtn);
+
+  navCard.appendChild(utilsDiv);
 
   navWrapper.appendChild(navCard);
 
