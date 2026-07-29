@@ -396,89 +396,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(bottomBar);
   }
 
-  // Menu button
-  const menuBtn = document.createElement("div");
-  menuBtn.className = "menu-btn";
-  menuBtn.setAttribute("data-no-translate", "");
-  menuBtn.textContent = "···";
-  const menuWrapper = document.createElement("div");
-  menuWrapper.className = "menu-wrapper";
-  menuWrapper.appendChild(menuBtn);
-  bottomBarRight.appendChild(menuWrapper);
-
-  // Menu card
-  const card = document.createElement("div");
-  card.className = "menu-card";
-  card.setAttribute("data-no-translate", "");
-
-  // Language buttons
-  const langsDiv = document.createElement("div");
-  langsDiv.className = "menu-langs";
-  const langs = [
-    { code: "en", label: "EN" },
-    { code: "zh", label: "中" },
-    { code: "fr", label: "FR" },
-  ];
-  langs.forEach(({ code, label }) => {
-    const btn = document.createElement("button");
-    btn.className = "lang-btn";
-    btn.dataset.lang = code;
-    btn.textContent = label;
-    btn.addEventListener("click", () => {
-      switchLang(code);
-      card.classList.remove("open");
-      updateCatSurprised();
-    });
-    langsDiv.appendChild(btn);
-  });
-  card.appendChild(langsDiv);
-
-  // Divider
-  const divider = document.createElement("div");
-  divider.className = "menu-divider";
-  card.appendChild(divider);
-
-  // Dark mode toggle
-  const darkBtn = document.createElement("button");
-  darkBtn.className = "dark-btn";
-  darkBtn.addEventListener("click", toggleDark);
-  card.appendChild(darkBtn);
-
-  menuWrapper.appendChild(card);
-
-  // Surprised cat when any menu is open — re-triggers on every toggle
-  const siteCat = document.querySelector(".site-cat");
-  function updateCatSurprised() {
-    if (!siteCat) return;
-    const anyOpen = card.classList.contains("open") || navCard.classList.contains("open");
-    if (anyOpen) {
-      siteCat.classList.remove("cat-surprised");
-      void siteCat.offsetWidth;
-      siteCat.classList.add("cat-surprised");
-    } else {
-      siteCat.classList.remove("cat-surprised");
-    }
-  }
-
-  // Toggle menu
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    card.classList.toggle("open");
-    updateCatSurprised();
-  });
-
-  // Close menu on outside click
-  document.addEventListener("click", (e) => {
-    if (!card.contains(e.target) && !menuBtn.contains(e.target)) {
-      card.classList.remove("open");
-      updateCatSurprised();
-    }
-    if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
-      navCard.classList.remove("open");
-      updateCatSurprised();
-    }
-  });
-
   // === Nav menu ===
   const navBtn = document.createElement("div");
   navBtn.className = "menu-btn nav-btn";
@@ -514,20 +431,61 @@ document.addEventListener("DOMContentLoaded", () => {
     navCard.appendChild(a);
   });
 
+  // Divider
+  const divider1 = document.createElement("div");
+  divider1.className = "menu-divider";
+  navCard.appendChild(divider1);
+
+  // Language buttons
+  const langsDiv = document.createElement("div");
+  langsDiv.className = "menu-langs";
+  const langs = [
+    { code: "en", label: "EN" },
+    { code: "zh", label: "中" },
+    { code: "fr", label: "FR" },
+  ];
+  langs.forEach(({ code, label }) => {
+    const btn = document.createElement("button");
+    btn.className = "lang-btn";
+    btn.dataset.lang = code;
+    btn.textContent = label;
+    btn.addEventListener("click", () => {
+      switchLang(code);
+      navCard.classList.remove("open");
+    });
+    langsDiv.appendChild(btn);
+  });
+  navCard.appendChild(langsDiv);
+
+  // Divider
+  const divider2 = document.createElement("div");
+  divider2.className = "menu-divider";
+  navCard.appendChild(divider2);
+
+  // Dark mode toggle
+  const darkBtn = document.createElement("button");
+  darkBtn.className = "dark-btn";
+  darkBtn.addEventListener("click", toggleDark);
+  navCard.appendChild(darkBtn);
+
   navWrapper.appendChild(navCard);
 
   navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    card.classList.remove("open");
     navCard.classList.toggle("open");
-    updateCatSurprised();
+  });
+
+  // Close nav card on outside click
+  document.addEventListener("click", (e) => {
+    if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
+      navCard.classList.remove("open");
+    }
   });
 
   // Close nav card on link click
   navCard.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       navCard.classList.remove("open");
-      updateCatSurprised();
     });
   });
 
