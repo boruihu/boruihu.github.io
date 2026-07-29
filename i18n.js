@@ -405,16 +405,13 @@ document.addEventListener("DOMContentLoaded", () => {
   navBtn.innerHTML = '<svg viewBox="0 0 18 14" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="1" y1="2" x2="17" y2="2"/><line x1="1" y1="7" x2="17" y2="7"/><line x1="1" y1="12" x2="17" y2="12"/></svg>';
   const navWrapper = document.createElement("div");
   navWrapper.className = "menu-wrapper";
+  navWrapper.setAttribute("data-no-translate", "");
   navWrapper.appendChild(navBtn);
   bottomBarLeft.appendChild(navWrapper);
 
-  const navCard = document.createElement("div");
-  navCard.className = "menu-card nav-card";
-  navCard.setAttribute("data-no-translate", "");
-
-  // Nav links row
-  const navLinks = document.createElement("div");
-  navLinks.className = "nav-links";
+  // Inline row that expands to the right
+  const menuRow = document.createElement("div");
+  menuRow.className = "menu-row";
 
   const navPages = [
     { href: "/", key: "home" },
@@ -433,20 +430,15 @@ document.addEventListener("DOMContentLoaded", () => {
     a.className = "nav-menu-link";
     a.setAttribute("data-i18n-nav", key);
     a.textContent = key;
-    navLinks.appendChild(a);
+    menuRow.appendChild(a);
   });
 
-  navCard.appendChild(navLinks);
+  // Separator
+  const sep = document.createElement("span");
+  sep.className = "menu-sep";
+  menuRow.appendChild(sep);
 
-  // Divider
-  const divider = document.createElement("div");
-  divider.className = "menu-divider";
-  navCard.appendChild(divider);
-
-  // Language + dark mode row
-  const utilsDiv = document.createElement("div");
-  utilsDiv.className = "menu-utils";
-
+  // Language buttons
   const langs = [
     { code: "en", label: "EN" },
     { code: "zh", label: "中" },
@@ -459,25 +451,25 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.textContent = label;
     btn.addEventListener("click", () => {
       switchLang(code);
-      navCard.classList.remove("open");
+      navWrapper.classList.remove("open");
+      updateCatSurprised();
     });
-    utilsDiv.appendChild(btn);
+    menuRow.appendChild(btn);
   });
 
+  // Dark mode toggle
   const darkBtn = document.createElement("button");
   darkBtn.className = "dark-btn";
   darkBtn.addEventListener("click", toggleDark);
-  utilsDiv.appendChild(darkBtn);
+  menuRow.appendChild(darkBtn);
 
-  navCard.appendChild(utilsDiv);
-
-  navWrapper.appendChild(navCard);
+  navWrapper.appendChild(menuRow);
 
   // Surprised cat when nav menu opens
   const siteCat = document.querySelector(".site-cat");
   function updateCatSurprised() {
     if (!siteCat) return;
-    if (navCard.classList.contains("open")) {
+    if (navWrapper.classList.contains("open")) {
       siteCat.classList.remove("cat-surprised");
       void siteCat.offsetWidth;
       siteCat.classList.add("cat-surprised");
@@ -488,22 +480,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    navCard.classList.toggle("open");
+    navWrapper.classList.toggle("open");
     updateCatSurprised();
   });
 
-  // Close nav card on outside click
+  // Close on outside click
   document.addEventListener("click", (e) => {
-    if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
-      navCard.classList.remove("open");
+    if (!navWrapper.contains(e.target)) {
+      navWrapper.classList.remove("open");
       updateCatSurprised();
     }
   });
 
-  // Close nav card on link click
-  navCard.querySelectorAll("a").forEach((a) => {
+  // Close on link click
+  menuRow.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
-      navCard.classList.remove("open");
+      navWrapper.classList.remove("open");
       updateCatSurprised();
     });
   });

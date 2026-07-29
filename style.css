@@ -206,53 +206,40 @@ footer {
   display: block;
 }
 
-/* Menu card — opens to the right, bottom-aligned */
-.menu-card {
-  position: absolute;
-  left: calc(100% + 0.6rem);
-  bottom: 0;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border-radius: 0.7rem;
-  background: rgba(250, 249, 247, 0.92);
-  border: 1px solid rgba(136, 136, 136, 0.25);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-6px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.menu-card.open {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-
-.menu-divider {
-  height: 1px;
-  background: rgba(136, 136, 136, 0.2);
-  margin: 0.1rem 0.3rem;
-}
-
-/* Nav links row */
-.nav-links {
+/* Inline menu row — expands to the right */
+.menu-wrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 0.1rem;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.4s ease, opacity 0.3s ease;
+  white-space: nowrap;
 }
 
-/* Language & util buttons in menu */
-.menu-utils {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.15rem;
-  padding: 0.1rem 0;
+.menu-wrapper.open .menu-row {
+  max-width: 900px;
+  opacity: 1;
+}
+
+.menu-sep {
+  width: 1px;
+  height: 1.1rem;
+  background: rgba(136, 136, 136, 0.3);
+  margin: 0 0.35rem;
+  flex-shrink: 0;
+}
+
+:root.dark .menu-sep {
+  background: rgba(107, 107, 118, 0.4);
 }
 
 .lang-btn {
@@ -297,21 +284,16 @@ footer {
   background: rgba(136, 136, 136, 0.08);
 }
 
-:root.dark .menu-btn,
-:root.dark .menu-card {
+:root.dark .menu-btn {
   background: rgba(22, 22, 24, 0.92);
   border-color: rgba(107, 107, 118, 0.3);
 }
 
-.nav-card {
-  align-items: stretch;
-}
-
 .nav-menu-link {
   display: inline-block;
-  padding: 0.25rem 0.55rem;
-  border-radius: 0.5rem;
-  font-size: 0.82rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
   font-family: inherit;
   color: var(--fg);
   text-decoration: none;
@@ -912,24 +894,15 @@ footer {
     width: 64px;
   }
 
-  .menu-card {
-    left: 0;
-    right: auto;
-    bottom: calc(100% + 0.5rem);
-    transform: translateY(6px);
-  }
-
-  .menu-card.open {
-    transform: translateY(0);
-  }
-
-  .nav-links {
-    gap: 0.05rem;
-  }
-
   .nav-menu-link {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.4rem;
+    font-size: 0.72rem;
+    padding: 0.15rem 0.35rem;
+  }
+
+  .lang-btn,
+  .dark-btn {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
   }
 }
 
