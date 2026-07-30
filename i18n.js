@@ -298,11 +298,8 @@ function getPage() {
 }
 
 function getSavedLang() {
-  try {
-    return localStorage.getItem("lang") || "en";
-  } catch {
-    return "en";
-  }
+  // Temporarily force EN; restore localStorage when re-enabling other languages
+  return "en";
 }
 
 function saveLang(lang) {
@@ -448,7 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { href: "ta.html", key: "ta" },
     { href: "education.html", key: "education" },
     { href: "misc.html", key: "misc" },
-    { href: "life.html", key: "life" },
+    // { href: "life.html", key: "life" },
     { href: "CV_HBr.pdf", key: "cv" },
   ];
 
@@ -461,40 +458,45 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.appendChild(a);
   });
 
-  cardBody.appendChild(navLinks);
-
-  // Divider
-  const divider = document.createElement("div");
-  divider.className = "menu-divider";
-  cardBody.appendChild(divider);
-
-  // Language + dark mode row
-  const utilsDiv = document.createElement("div");
-  utilsDiv.className = "menu-utils";
-
-  const langs = [
-    { code: "en", label: "EN" },
-    { code: "zh", label: "中" },
-    { code: "fr", label: "FR" },
-  ];
-  langs.forEach(({ code, label }) => {
-    const btn = document.createElement("button");
-    btn.className = "lang-btn";
-    btn.dataset.lang = code;
-    btn.textContent = label;
-    btn.addEventListener("click", () => {
-      switchLang(code);
-      closeMenu();
-    });
-    utilsDiv.appendChild(btn);
-  });
-
+  // Dark mode button in first row
   const darkBtn = document.createElement("button");
   darkBtn.className = "dark-btn";
   darkBtn.addEventListener("click", toggleDark);
-  utilsDiv.appendChild(darkBtn);
+  navLinks.appendChild(darkBtn);
 
-  cardBody.appendChild(utilsDiv);
+  cardBody.appendChild(navLinks);
+
+  // --- Second row (temporarily disabled) ---
+  // const divider = document.createElement("div");
+  // divider.className = "menu-divider";
+  // cardBody.appendChild(divider);
+
+  // const utilsDiv = document.createElement("div");
+  // utilsDiv.className = "menu-utils";
+
+  // const langs = [
+  //   { code: "en", label: "EN" },
+  //   { code: "zh", label: "中" },
+  //   { code: "fr", label: "FR" },
+  // ];
+  // langs.forEach(({ code, label }) => {
+  //   const btn = document.createElement("button");
+  //   btn.className = "lang-btn";
+  //   btn.dataset.lang = code;
+  //   btn.textContent = label;
+  //   btn.addEventListener("click", () => {
+  //     switchLang(code);
+  //     closeMenu();
+  //   });
+  //   utilsDiv.appendChild(btn);
+  // });
+
+  // const darkBtn2 = document.createElement("button");
+  // darkBtn2.className = "dark-btn";
+  // darkBtn2.addEventListener("click", toggleDark);
+  // utilsDiv.appendChild(darkBtn2);
+
+  // cardBody.appendChild(utilsDiv);
   cardInner.appendChild(cardBody);
   navCard.appendChild(cardInner);
   bottomBarLeft.appendChild(navCard);
