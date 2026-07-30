@@ -398,10 +398,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // === Nav menu ===
-  const navBtn = document.createElement("div");
+  const navBtn = document.createElement("button");
   navBtn.className = "menu-btn nav-btn";
   navBtn.setAttribute("data-no-translate", "");
   navBtn.setAttribute("aria-label", "Navigation");
+  navBtn.setAttribute("aria-expanded", "false");
+  navBtn.setAttribute("aria-controls", "menu-card");
   navBtn.innerHTML = '<svg viewBox="0 0 18 14" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="1" y1="2" x2="17" y2="2"/><line x1="1" y1="7" x2="17" y2="7"/><line x1="1" y1="12" x2="17" y2="12"/></svg>';
   const navWrapper = document.createElement("div");
   navWrapper.className = "menu-wrapper";
@@ -412,7 +414,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Menu card
   const navCard = document.createElement("div");
   navCard.className = "menu-card";
+  navCard.id = "menu-card";
   navCard.setAttribute("data-no-translate", "");
+
+  // Inner wrapper (grid item, overflow hidden)
+  const cardInner = document.createElement("div");
+  cardInner.className = "menu-card-inner";
+
+  // Body wrapper (visual styling)
+  const cardBody = document.createElement("div");
+  cardBody.className = "menu-card-body";
 
   // Nav links row
   const navLinks = document.createElement("div");
@@ -438,12 +449,12 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.appendChild(a);
   });
 
-  navCard.appendChild(navLinks);
+  cardBody.appendChild(navLinks);
 
   // Divider
   const divider = document.createElement("div");
   divider.className = "menu-divider";
-  navCard.appendChild(divider);
+  cardBody.appendChild(divider);
 
   // Language + dark mode row
   const utilsDiv = document.createElement("div");
@@ -461,8 +472,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.textContent = label;
     btn.addEventListener("click", () => {
       switchLang(code);
-      navCard.classList.remove("open");
-      updateCatSurprised();
+      closeMenu();
     });
     utilsDiv.appendChild(btn);
   });
@@ -472,8 +482,10 @@ document.addEventListener("DOMContentLoaded", () => {
   darkBtn.addEventListener("click", toggleDark);
   utilsDiv.appendChild(darkBtn);
 
-  navCard.appendChild(utilsDiv);
-  navWrapper.appendChild(navCard);
+  cardBody.appendChild(utilsDiv);
+  cardInner.appendChild(cardBody);
+  navCard.appendChild(cardInner);
+  bottomBarLeft.appendChild(navCard);
 
   // Surprised cat when nav menu opens
   const siteCat = document.querySelector(".site-cat");
@@ -488,25 +500,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function closeMenu() {
+    navCard.classList.remove("open");
+    navBtn.setAttribute("aria-expanded", "false");
+    updateCatSurprised();
+  }
+
   navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
+    const isOpen = !navCard.classList.contains("open");
     navCard.classList.toggle("open");
+    navBtn.setAttribute("aria-expanded", String(isOpen));
     updateCatSurprised();
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navCard.classList.contains("open")) {
+      closeMenu();
+      navBtn.focus();
+    }
   });
 
   // Close on outside click
   document.addEventListener("click", (e) => {
     if (!navCard.contains(e.target) && !navBtn.contains(e.target)) {
-      navCard.classList.remove("open");
-      updateCatSurprised();
+      closeMenu();
     }
   });
 
   // Close on link click
-  navCard.querySelectorAll("a").forEach((a) => {
+  cardBody.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
-      navCard.classList.remove("open");
-      updateCatSurprised();
+      closeMenu();
     });
   });
 
