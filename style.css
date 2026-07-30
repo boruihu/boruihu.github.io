@@ -431,8 +431,6 @@ footer {
 .bottom-bar {
   max-width: 640px;
   margin: 0.75rem auto 0;
-  display: flex;
-  align-items: flex-end;
 }
 
 .bottom-bar-left {
