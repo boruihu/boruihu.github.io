@@ -206,11 +206,21 @@ footer {
   display: block;
 }
 
-/* Inline menu row — expands to the right */
+/* Inline menu — clip layer for animation, inner row wraps freely */
 .menu-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.menu-clip {
+  overflow: hidden;
+  max-width: 0;
+  transition: max-width 0.4s ease;
+}
+
+.menu-wrapper.open .menu-clip {
+  max-width: calc(100vw - 5rem);
 }
 
 .menu-row {
@@ -219,14 +229,11 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.1rem;
-  overflow: hidden;
-  max-width: 0;
   opacity: 0;
-  transition: max-width 0.4s ease, opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .menu-wrapper.open .menu-row {
-  max-width: calc(100vw - 5rem);
   opacity: 1;
 }
 

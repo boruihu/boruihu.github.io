@@ -409,6 +409,10 @@ document.addEventListener("DOMContentLoaded", () => {
   navWrapper.appendChild(navBtn);
   bottomBarLeft.appendChild(navWrapper);
 
+  // Clip wrapper for animation
+  const menuClip = document.createElement("div");
+  menuClip.className = "menu-clip";
+
   // Inline row that expands to the right
   const menuRow = document.createElement("div");
   menuRow.className = "menu-row";
@@ -463,7 +467,8 @@ document.addEventListener("DOMContentLoaded", () => {
   darkBtn.addEventListener("click", toggleDark);
   menuRow.appendChild(darkBtn);
 
-  navWrapper.appendChild(menuRow);
+  menuClip.appendChild(menuRow);
+  navWrapper.appendChild(menuClip);
 
   // Surprised cat when nav menu opens
   const siteCat = document.querySelector(".site-cat");
