@@ -36,6 +36,10 @@ const i18n = {
       proj2_date: "2026 Fall – Present",
       proj2_content:
         "I am attending the fluid PDE seminar organized by <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>.",
+      proj3_title: "The Entropy JKO Map is Nonexpansive on Gaussian Inputs",
+      proj3_date: "2026",
+      proj3_content:
+        'Independent work. Proved that the entropy JKO map is nonexpansive on Gaussian inputs. <a href="Entropy_JKO_Nonexpansivity_on_Gaussian_Inputs.pdf" target="_blank" rel="noopener">PDF</a>',
     },
     ta: {
       title: "TA – Borui HU 胡博睿",
@@ -127,6 +131,10 @@ const i18n = {
       proj2_date: "2026年秋季 – 至今",
       proj2_content:
         "我正在参加<a href=\"https://www.zhangjy9610.me\">章俊彦教授</a>组织的流体PDE讨论班。",
+      proj3_title: "熵JKO映射在高斯测度下的非扩张性",
+      proj3_date: "2026年",
+      proj3_content:
+        '独立完成。证明了当自变量为高斯测度时，熵JKO映射是非扩张的。<a href="Entropy_JKO_Nonexpansivity_on_Gaussian_Inputs.pdf" target="_blank" rel="noopener">PDF</a>',
     },
     ta: {
       title: "助教 – 胡博睿",
@@ -218,6 +226,10 @@ const i18n = {
       proj2_date: "Automne 2026 – Présent",
       proj2_content:
         "Je participe au séminaire sur les EDP des fluides organisé par le <a href=\"https://www.zhangjy9610.me\">Prof. Junyan Zhang</a>.",
+      proj3_title: "L'application JKO d'entropie est non-expansive sur des mesures gaussiennes",
+      proj3_date: "2026",
+      proj3_content:
+        'Travail indépendant. Preuve que l\'application JKO d\'entropie est non-expansive lorsqu\'elle est évaluée sur des mesures gaussiennes. <a href="Entropy_JKO_Nonexpansivity_on_Gaussian_Inputs.pdf" target="_blank" rel="noopener">PDF</a>',
     },
     ta: {
       title: "Assistant – Borui HU 胡博睿",
