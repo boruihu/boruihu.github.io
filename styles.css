@@ -197,6 +197,10 @@ main:focus {
   padding-block: clamp(88px, 13vh, 132px) 96px;
 }
 
+.home {
+  padding-block: clamp(76px, 11vh, 112px) 84px;
+}
+
 .home-name,
 .page-title {
   margin: 0;
@@ -220,7 +224,7 @@ main:focus {
 }
 
 .profile {
-  margin-block-start: 52px;
+  margin-block-start: 44px;
   font-size: 16px;
 }
 
@@ -245,7 +249,7 @@ main:focus {
 }
 
 .cv-link {
-  margin: 42px 0 0;
+  margin: 36px 0 0;
   font-family: "Libertinus", Georgia, serif;
   font-size: 18px;
   line-height: 1.4;
@@ -392,6 +396,10 @@ main:focus {
     padding-block: 79px 64px;
   }
 
+  .home {
+    padding-block: 68px 56px;
+  }
+
   .home-name {
     font-size: 38px;
   }
@@ -402,7 +410,7 @@ main:focus {
   }
 
   .profile {
-    margin-block-start: 43px;
+    margin-block-start: 37px;
     font-size: 15px;
   }
 
