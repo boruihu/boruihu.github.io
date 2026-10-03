@@ -139,6 +139,37 @@ a:focus-visible {
   content: "";
 }
 
+.academic-subnav {
+  display: flex;
+  gap: 28px;
+  margin-top: -15px;
+}
+
+.academic-subnav button {
+  padding: 0 0 5px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.academic-subnav button.is-active {
+  border-bottom-color: currentColor;
+  color: var(--ink);
+}
+
+.academic-subnav button:hover {
+  color: var(--accent);
+}
+
+.academic-panel[hidden] {
+  display: none;
+}
+
 @media (hover: hover) {
   .site-nav a:hover,
   .site-name:hover {
@@ -293,6 +324,11 @@ main:focus {
   .site-nav {
     gap: 23px;
     font-size: 13px;
+  }
+
+  .academic-subnav {
+    gap: 22px;
+    margin-top: -6px;
   }
 
   .home,

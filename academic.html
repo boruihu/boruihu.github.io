@@ -19,22 +19,49 @@
           <a href="academic.html" aria-current="page">学术</a>
           <a href="life.html">生活</a>
         </nav>
+        <nav class="academic-subnav" aria-label="学术栏目">
+          <button type="button" class="is-active" aria-selected="true" data-panel="research-panel">科研</button>
+          <button type="button" aria-selected="false" data-panel="teaching-panel">助教</button>
+          <button type="button" aria-selected="false" data-panel="student-panel">学生</button>
+        </nav>
       </header>
       <main class="page" id="main" tabindex="-1">
         <h1 class="page-title">正在学习</h1>
-        <div class="study-list" aria-label="正在学习的内容">
-          <section class="study-item" aria-labelledby="pde-title">
-            <h2 id="pde-title">偏微分方程</h2>
-            <div class="study-detail">
-              <p class="book-title" lang="en"><a href="https://link.springer.com/book/10.1007/978-1-4612-2578-2"><cite>Blowup for Nonlinear Hyperbolic Equations</cite></a></p>
-              <p class="book-author" lang="en">Serge Alinhac</p>
-            </div>
-          </section>
-          <section class="study-item" aria-labelledby="ot-title">
-            <h2 id="ot-title">最优传输</h2>
-          </section>
-        </div>
+        <section id="research-panel" class="academic-panel" aria-label="科研">
+          <div class="study-list" aria-label="正在学习的内容">
+            <section class="study-item" aria-labelledby="pde-title">
+              <h2 id="pde-title">偏微分方程</h2>
+              <div class="study-detail">
+                <p class="book-title" lang="en"><a href="https://link.springer.com/book/10.1007/978-1-4612-2578-2"><cite>Blowup for Nonlinear Hyperbolic Equations</cite></a></p>
+                <p class="book-author" lang="en">Serge Alinhac</p>
+              </div>
+            </section>
+            <section class="study-item" aria-labelledby="ot-title">
+              <h2 id="ot-title">最优传输</h2>
+            </section>
+          </div>
+        </section>
+        <section id="teaching-panel" class="academic-panel" aria-label="助教" hidden></section>
+        <section id="student-panel" class="academic-panel" aria-label="学生" hidden></section>
       </main>
     </div>
+    <script>
+      const sectionButtons = document.querySelectorAll(".academic-subnav button");
+      const sectionPanels = document.querySelectorAll(".academic-panel");
+
+      sectionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const panelId = button.dataset.panel;
+          sectionButtons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-selected", String(active));
+          });
+          sectionPanels.forEach((panel) => {
+            panel.hidden = panel.id !== panelId;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
