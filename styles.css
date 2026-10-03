@@ -57,7 +57,7 @@ html {
 body {
   margin: 0;
   font-family: var(--body-font);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
 }
@@ -116,7 +116,7 @@ a:focus-visible {
   display: flex;
   align-items: baseline;
   gap: 36px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
@@ -152,7 +152,7 @@ a:focus-visible {
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   cursor: pointer;
 }
@@ -240,7 +240,7 @@ main:focus {
 }
 
 .page-title {
-  font-size: clamp(30px, 2.8vw, 38px);
+  font-size: clamp(28px, 2.6vw, 35px);
   line-height: 1.5;
   letter-spacing: 0.035em;
 }
@@ -270,7 +270,7 @@ main:focus {
 
 .study-item h2 {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.85;
 }
@@ -281,7 +281,7 @@ main:focus {
 
 .book-title {
   font-family: "Libertinus", Georgia, serif;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.55;
   overflow-wrap: anywhere;
 }
@@ -305,7 +305,7 @@ main:focus {
   margin-block-start: 8px;
   color: var(--muted);
   font-family: "Libertinus", Georgia, serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
