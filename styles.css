@@ -207,6 +207,8 @@ main:focus {
 }
 
 .study-list {
+  display: grid;
+  gap: 18px;
   margin-block-start: 54px;
   max-width: 800px;
   margin-inline: auto;
@@ -214,7 +216,17 @@ main:focus {
 
 .study-item {
   display: block;
-  padding-block: 27px 29px;
+  padding: 27px 30px 29px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: transparent;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.study-item:hover {
+  border-color: #c8cec2;
+  background: #f1f3ee;
+  transform: translateY(-2px);
 }
 
 .study-item h2 {
@@ -222,16 +234,6 @@ main:focus {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.85;
-}
-
-.study-item h2::before {
-  content: "·";
-  display: inline-block;
-  margin-inline-end: 12px;
-  color: var(--accent);
-  font-size: 1.65em;
-  line-height: 0;
-  vertical-align: -0.12em;
 }
 
 .study-detail p {
@@ -317,7 +319,7 @@ main:focus {
   }
 
   .study-item {
-    padding-block: 24px;
+    padding: 24px 20px;
   }
 }
 
