@@ -253,7 +253,7 @@ main:focus {
   display: grid;
   gap: 12px;
   margin-block-start: 54px;
-  max-width: 560px;
+  width: min(100%, 280px);
   margin-inline: auto;
 }
 
