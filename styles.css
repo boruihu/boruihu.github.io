@@ -230,7 +230,8 @@ main:focus {
 
 .profile .profile-intro {
   display: block;
-  width: 230px;
+  width: 300px;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 17px 22px 18px;
@@ -377,7 +378,7 @@ main:focus {
   }
 
   .profile .profile-intro {
-    width: 190px;
+    width: 280px;
   }
 
   .study-list {
