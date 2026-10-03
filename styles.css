@@ -229,7 +229,11 @@ main:focus {
 }
 
 .profile-intro {
+  display: inline-block;
   max-width: 520px;
+  padding: 17px 22px 18px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
   margin-inline: auto;
   line-height: 2;
 }
