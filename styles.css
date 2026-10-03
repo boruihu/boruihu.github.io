@@ -95,12 +95,13 @@ a:focus-visible {
 .site {
   width: min(960px, calc(100% - 112px));
   margin-inline: auto;
+  text-align: center;
 }
 
 .site-header {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   gap: 32px;
   padding-block: 35px 27px;
 }
@@ -208,13 +209,11 @@ main:focus {
 .study-list {
   margin-block-start: 54px;
   max-width: 800px;
+  margin-inline: auto;
 }
 
 .study-item {
-  display: grid;
-  grid-template-columns: 174px minmax(0, 1fr);
-  column-gap: 26px;
-  align-items: baseline;
+  display: block;
   padding-block: 27px 29px;
 }
 
@@ -228,8 +227,11 @@ main:focus {
 .study-item h2::before {
   content: "·";
   display: inline-block;
-  margin-inline-end: 10px;
+  margin-inline-end: 12px;
   color: var(--accent);
+  font-size: 1.65em;
+  line-height: 0;
+  vertical-align: -0.12em;
 }
 
 .study-detail p {
@@ -278,7 +280,7 @@ main:focus {
   }
 
   .site-header {
-    gap: 20px;
+    gap: 18px;
     padding-block: 27px 22px;
   }
 
@@ -315,8 +317,6 @@ main:focus {
   }
 
   .study-item {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 15px;
     padding-block: 24px;
   }
 }
