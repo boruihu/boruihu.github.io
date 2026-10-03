@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Homepage Serif SC";
+  src: url("assets/fonts/HomepageSerifSC.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: "Homepage Kai";
+  src: local("KaiTi"), local("Kaiti SC"), local("STKaiti"), url("assets/fonts/HomepageKai.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus";
+  src: url("assets/fonts/LibertinusSerif-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus";
+  src: url("assets/fonts/LibertinusSerif-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --paper: #f8f7f4;
+  --ink: #222521;
+  --muted: #6b6f67;
+  --rule: #dedfd7;
+  --accent: #3c5445;
+  --body-font: "Homepage Serif SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --heading-font: "Homepage Serif SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #dfe5da;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1;
+  inset-block-start: 16px;
+  inset-inline-start: 16px;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site {
+  width: min(960px, calc(100% - 112px));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 32px;
+  padding-block: 35px 27px;
+  border-block-end: 1px solid var(--rule);
+}
+
+.site-name {
+  font-family: "Libertinus", Georgia, serif;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.site-nav {
+  display: flex;
+  align-items: baseline;
+  gap: 36px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.site-nav a {
+  position: relative;
+  padding-block: 3px 7px;
+  color: var(--muted);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.site-nav a[aria-current="page"]::after {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+@media (hover: hover) {
+  .site-nav a:hover,
+  .site-name:hover {
+    color: var(--accent);
+  }
+}
+
+main:focus {
+  outline: none;
+}
+
+.home,
+.page {
+  padding-block: clamp(88px, 13vh, 132px) 96px;
+}
+
+.home-name,
+.page-title {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+.home-name {
+  font-family: "Homepage Kai", "KaiTi", "Kaiti SC", "STKaiti", serif;
+  font-size: clamp(48px, 4.6vw, 64px);
+  line-height: 1.35;
+  letter-spacing: 0.045em;
+}
+
+.english-name {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-family: "Libertinus", Georgia, serif;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.profile {
+  margin-block-start: 52px;
+  font-size: 16px;
+}
+
+.profile p {
+  margin: 0;
+}
+
+.profile .cohort {
+  margin-block-start: 3px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.separator {
+  margin-inline: 5px;
+}
+
+.profile .interest {
+  margin-block-start: 25px;
+}
+
+.page-title {
+  font-size: clamp(34px, 3.2vw, 44px);
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+}
+
+.study-list {
+  margin-block-start: 54px;
+  max-width: 800px;
+  border-block-start: 1px solid var(--rule);
+}
+
+.study-item {
+  display: grid;
+  grid-template-columns: 174px minmax(0, 1fr);
+  column-gap: 26px;
+  align-items: baseline;
+  padding-block: 27px 29px;
+  border-block-end: 1px solid var(--rule);
+}
+
+.study-item h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.study-detail p {
+  margin: 0;
+}
+
+.book-title {
+  font-family: "Libertinus", Georgia, serif;
+  font-size: 22px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.book-title cite {
+  font-style: italic;
+}
+
+.book-title a {
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+.book-title a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.study-detail .book-author {
+  margin-block-start: 8px;
+  color: var(--muted);
+  font-family: "Libertinus", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1600px) {
+  .site {
+    width: 1040px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site {
+    width: calc(100% - 48px);
+  }
+
+  .site-header {
+    gap: 20px;
+    padding-block: 27px 22px;
+  }
+
+  .site-name {
+    font-size: 20px;
+  }
+
+  .site-nav {
+    gap: 23px;
+    font-size: 13px;
+  }
+
+  .home,
+  .page {
+    padding-block: 79px 64px;
+  }
+
+  .home-name {
+    font-size: 48px;
+  }
+
+  .english-name {
+    margin-block-start: 11px;
+    font-size: 26px;
+  }
+
+  .profile {
+    margin-block-start: 43px;
+    font-size: 15px;
+  }
+
+  .study-list {
+    margin-block-start: 37px;
+  }
+
+  .study-item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 15px;
+    padding-block: 24px;
+  }
+}
+
+@media (max-width: 359px) {
+  .site {
+    width: calc(100% - 40px);
+  }
+
+  .site-nav {
+    gap: 17px;
+  }
+}
+
+@media print {
+  html {
+    background: white;
+    color: black;
+  }
+
+  .site {
+    width: 100%;
+  }
+
+  .site-nav,
+  .skip-link {
+    display: none;
+  }
+}
