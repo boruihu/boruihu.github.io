@@ -244,6 +244,24 @@ main:focus {
   margin-block-start: 6px;
 }
 
+.cv-link {
+  margin: 42px 0 0;
+  font-family: "Libertinus", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.cv-link a {
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 5px;
+}
+
+.cv-link a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
 .profile .cohort {
   margin-block-start: 3px;
   color: var(--muted);
