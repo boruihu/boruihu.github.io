@@ -230,7 +230,7 @@ main:focus {
 
 .profile .profile-intro {
   display: block;
-  width: 300px;
+  width: 330px;
   max-width: 100%;
   margin: 0 auto;
   padding: 17px 22px 18px 38px;
@@ -288,6 +288,10 @@ main:focus {
   border-color: #c8cec2;
   background: #f1f3ee;
   transform: translateY(-2px);
+}
+
+.teaching-item {
+  margin-inline: auto;
 }
 
 .study-item h2 {
@@ -381,7 +385,7 @@ main:focus {
   }
 
   .profile .profile-intro {
-    width: 280px;
+    width: 300px;
   }
 
   .study-list {
