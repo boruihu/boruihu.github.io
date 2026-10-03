@@ -228,7 +228,7 @@ main:focus {
   margin: 0;
 }
 
-.profile-intro {
+.profile .profile-intro {
   display: block;
   width: 230px;
   margin-right: auto;
@@ -376,7 +376,7 @@ main:focus {
     font-size: 15px;
   }
 
-  .profile-intro {
+  .profile .profile-intro {
     width: 190px;
   }
 
