@@ -146,20 +146,28 @@ a:focus-visible {
 }
 
 .academic-subnav button {
-  padding: 0 0 5px;
+  position: relative;
+  padding: 3px 0 7px;
   border: 0;
-  border-bottom: 1px solid transparent;
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   cursor: pointer;
 }
 
 .academic-subnav button.is-active {
-  border-bottom-color: currentColor;
   color: var(--ink);
+}
+
+.academic-subnav button.is-active::after {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
 }
 
 .academic-subnav button:hover {
