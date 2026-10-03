@@ -157,7 +157,6 @@ a:focus-visible {
   padding: 3px 0 7px;
   border: 0;
   background: transparent;
-  font: inherit;
   cursor: pointer;
 }
 
