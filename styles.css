@@ -229,8 +229,7 @@ main:focus {
 }
 
 .profile-intro {
-  display: inline-block;
-  max-width: 520px;
+  width: 230px;
   padding: 17px 22px 18px;
   border: 1px solid var(--rule);
   border-radius: 10px;
@@ -372,6 +371,10 @@ main:focus {
   .profile {
     margin-block-start: 43px;
     font-size: 15px;
+  }
+
+  .profile-intro {
+    width: 190px;
   }
 
   .study-list {
