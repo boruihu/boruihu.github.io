@@ -264,6 +264,10 @@ main:focus {
   letter-spacing: 0.035em;
 }
 
+.teaching-title {
+  font-size: calc(clamp(28px, 2.6vw, 35px) * 2 / 3);
+}
+
 .study-list {
   display: grid;
   gap: 12px;
