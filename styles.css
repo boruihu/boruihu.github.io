@@ -208,15 +208,15 @@ main:focus {
 
 .study-list {
   display: grid;
-  gap: 18px;
+  gap: 12px;
   margin-block-start: 54px;
-  max-width: 800px;
+  max-width: 560px;
   margin-inline: auto;
 }
 
 .study-item {
   display: block;
-  padding: 27px 30px 29px;
+  padding: 17px 22px 18px;
   border: 1px solid var(--rule);
   border-radius: 10px;
   background: transparent;
@@ -319,7 +319,7 @@ main:focus {
   }
 
   .study-item {
-    padding: 24px 20px;
+    padding: 15px 18px 16px;
   }
 }
 
