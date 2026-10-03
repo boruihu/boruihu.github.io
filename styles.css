@@ -258,12 +258,15 @@ main:focus {
   display: grid;
   gap: 12px;
   margin-block-start: 54px;
-  width: min(100%, 280px);
+  width: fit-content;
+  max-width: 100%;
   margin-inline: auto;
 }
 
 .study-item {
   display: block;
+  width: fit-content;
+  max-width: 100%;
   padding: 17px 22px 18px;
   border: 1px solid var(--rule);
   border-radius: 10px;
