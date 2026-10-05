@@ -1,21 +1,4 @@
 @font-face {
-  font-family: "Homepage Serif SC";
-  src: url("assets/fonts/HomepageSerifSC.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
-}
-
-@font-face {
-  font-family: "Homepage Kai";
-  src: local("KaiTi"), local("Kaiti SC"), local("STKaiti"), url("assets/fonts/HomepageKai.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Libertinus";
   src: url("assets/fonts/LibertinusSerif-Regular.woff2") format("woff2");
   font-style: normal;
@@ -37,8 +20,10 @@
   --muted: #6b6f67;
   --rule: #dedfd7;
   --accent: #3c5445;
-  --body-font: "Homepage Serif SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
-  --heading-font: "Homepage Serif SC", "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --body-font: "Libertinus", Georgia, serif;
+  --size-body: 16px;
+  --size-heading: 24px;
+  --size-name: 32px;
 }
 
 *,
@@ -57,8 +42,8 @@ html {
 body {
   margin: 0;
   font-family: var(--body-font);
-  font-size: 15px;
-  line-height: 1.85;
+  font-size: var(--size-body);
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -72,7 +57,8 @@ a {
   text-decoration: none;
 }
 
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 6px;
 }
@@ -102,68 +88,52 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-  padding-block: 35px 27px;
+  gap: 26px;
+  padding-block: 32px 24px;
 }
 
 .site-name {
-  font-family: "Libertinus", Georgia, serif;
-  font-size: 22px;
   line-height: 1.4;
 }
 
-.site-nav {
-  display: flex;
+.site-nav,
+.academic-subnav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
   align-items: baseline;
-  gap: 36px;
-  line-height: 1.6;
+  width: min(360px, 100%);
+  line-height: 1.4;
 }
 
 .site-nav a,
 .academic-subnav button {
   position: relative;
-  padding-block: 3px 7px;
+  padding: 4px 0 7px;
   color: var(--muted);
   font-family: var(--body-font);
-  font-size: 13px;
+  font-size: var(--size-body);
   font-weight: 400;
-  line-height: 1.6;
-}
-
-.site-nav a {
-  position: relative;
-}
-
-.site-nav a[aria-current="page"] {
-  color: var(--ink);
-}
-
-.site-nav a[aria-current="page"]::after {
-  position: absolute;
-  inset-inline: 0;
-  inset-block-end: 0;
-  height: 1px;
-  background: currentColor;
-  content: "";
+  line-height: 1.4;
 }
 
 .academic-subnav {
-  display: flex;
-  gap: 28px;
-  margin-top: -15px;
+  margin-top: -14px;
 }
 
 .academic-subnav button {
-  padding: 3px 0 7px;
   border: 0;
+  border-radius: 0;
   background: transparent;
   cursor: pointer;
 }
 
+.site-nav a[aria-current="page"],
 .academic-subnav button.is-active {
   color: var(--ink);
 }
 
+.site-nav a[aria-current="page"]::after,
 .academic-subnav button.is-active::after {
   position: absolute;
   inset-inline: 0;
@@ -173,16 +143,9 @@ a:focus-visible {
   content: "";
 }
 
-.academic-subnav button:hover {
-  color: var(--accent);
-}
-
-.academic-panel[hidden] {
-  display: none;
-}
-
 @media (hover: hover) {
   .site-nav a:hover,
+  .academic-subnav button:hover,
   .site-name:hover {
     color: var(--accent);
   }
@@ -194,116 +157,71 @@ main:focus {
 
 .home,
 .page {
-  padding-block: clamp(88px, 13vh, 132px) 96px;
-}
-
-.home {
-  padding-block: clamp(76px, 11vh, 112px) 84px;
+  padding-block: clamp(56px, 9vh, 88px) 64px;
 }
 
 .home-name,
 .page-title {
   margin: 0;
-  font-family: var(--heading-font);
   font-weight: 400;
+  line-height: 1.4;
 }
 
 .home-name {
-  font-family: "Homepage Kai", "KaiTi", "Kaiti SC", "STKaiti", serif;
-  font-size: clamp(38px, 3.7vw, 48px);
-  line-height: 1.35;
-  letter-spacing: 0.045em;
-}
-
-.english-name {
-  margin: 15px 0 0;
-  color: var(--muted);
-  font-family: "Libertinus", Georgia, serif;
-  font-size: 28px;
-  line-height: 1.4;
-}
-
-.profile {
-  margin-block-start: 44px;
-  font-size: 16px;
-}
-
-.profile p {
-  margin: 0;
-}
-
-.profile .profile-intro {
-  display: block;
-  width: 330px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 17px 22px 18px 38px;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  text-align: left;
-  line-height: 2;
-}
-
-.profile-intro li + li {
-  margin-block-start: 6px;
-}
-
-.cv-link {
-  margin: 36px 0 0;
-  font-family: "Libertinus", Georgia, serif;
-  font-size: 18px;
-  line-height: 1.4;
-}
-
-.cv-link a {
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
-  text-underline-offset: 5px;
-}
-
-.cv-link a:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-}
-
-.profile .cohort {
-  margin-block-start: 3px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.separator {
-  margin-inline: 5px;
-}
-
-.profile .interest {
-  margin-block-start: 25px;
+  font-size: var(--size-name);
+  letter-spacing: 0.02em;
 }
 
 .page-title {
-  font-size: clamp(28px, 2.6vw, 35px);
-  line-height: 1.5;
-  letter-spacing: 0.035em;
+  font-size: var(--size-heading);
 }
 
-.teaching-title {
-  font-size: calc(clamp(28px, 2.6vw, 35px) * 2 / 3);
+.profile {
+  margin-block-start: 32px;
+}
+
+.profile .profile-intro {
+  width: 420px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 26px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.cv-link {
+  margin: 28px 0 0;
+  line-height: 1.4;
+}
+
+.cv-link a,
+.book-title a {
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+
+.cv-link a:hover,
+.book-title a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .study-list {
   display: grid;
   gap: 12px;
-  margin-block-start: 54px;
   width: fit-content;
   max-width: 100%;
-  margin-inline: auto;
+  margin: 36px auto 0;
 }
 
 .study-item {
   display: block;
   width: fit-content;
   max-width: 100%;
-  padding: 17px 22px 18px;
+  padding: 18px 24px;
   border: 1px solid var(--rule);
   border-radius: 10px;
   background: transparent;
@@ -316,55 +234,46 @@ main:focus {
   transform: translateY(-2px);
 }
 
-.teaching-item {
-  margin-inline: auto;
-}
-
 .study-item h2 {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--size-body);
   font-weight: 400;
-  line-height: 1.85;
 }
 
 .study-detail p {
   margin: 0;
 }
 
-.book-title {
-  font-family: "Libertinus", Georgia, serif;
-  font-size: 19px;
-  line-height: 1.55;
-  overflow-wrap: anywhere;
+.study-detail .book-title {
+  margin-block-start: 8px;
+  overflow-wrap: break-word;
 }
 
 .book-title cite {
   font-style: italic;
 }
 
-.book-title a {
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
-  text-underline-offset: 5px;
-  text-decoration-thickness: 1px;
-}
-
-.book-title a:hover {
-  text-decoration-color: var(--accent);
-}
-
 .study-detail .book-author {
-  margin-block-start: 8px;
+  margin-block-start: 6px;
   color: var(--muted);
-  font-family: "Libertinus", Georgia, serif;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
-@media (min-width: 1600px) {
-  .site {
-    width: 1040px;
-  }
+.teaching-item {
+  margin-inline: auto;
+}
+
+.course-term,
+.course-name {
+  display: block;
+}
+
+.course-term {
+  margin-block-end: 6px;
+  color: var(--muted);
+}
+
+.academic-panel[hidden] {
+  display: none;
 }
 
 @media (max-width: 640px) {
@@ -373,67 +282,43 @@ main:focus {
   }
 
   .site-header {
-    gap: 18px;
-    padding-block: 27px 22px;
-  }
-
-  .site-name {
-    font-size: 20px;
-  }
-
-  .site-nav {
-    gap: 23px;
-    font-size: 13px;
+    gap: 22px;
+    padding-block: 26px 20px;
   }
 
   .academic-subnav {
-    gap: 22px;
-    margin-top: -6px;
+    margin-top: -10px;
   }
 
   .home,
   .page {
-    padding-block: 79px 64px;
-  }
-
-  .home {
-    padding-block: 68px 56px;
-  }
-
-  .home-name {
-    font-size: 38px;
-  }
-
-  .english-name {
-    margin-block-start: 11px;
-    font-size: 26px;
+    padding-block: 52px 48px;
   }
 
   .profile {
-    margin-block-start: 37px;
-    font-size: 15px;
+    margin-block-start: 28px;
   }
 
   .profile .profile-intro {
-    width: 300px;
+    padding: 18px 22px;
   }
 
   .study-list {
-    margin-block-start: 37px;
+    margin-block-start: 30px;
   }
 
   .study-item {
-    padding: 15px 18px 16px;
+    padding: 16px 20px;
   }
 }
 
-@media (max-width: 359px) {
-  .site {
-    width: calc(100% - 40px);
+@media (prefers-reduced-motion: reduce) {
+  .study-item {
+    transition: none;
   }
 
-  .site-nav {
-    gap: 17px;
+  .study-item:hover {
+    transform: none;
   }
 }
 
@@ -448,6 +333,7 @@ main:focus {
   }
 
   .site-nav,
+  .academic-subnav,
   .skip-link {
     display: none;
   }
