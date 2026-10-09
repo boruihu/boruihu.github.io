@@ -272,6 +272,29 @@ main:focus {
   color: var(--muted);
 }
 
+.studies-list {
+  width: 420px;
+  gap: 16px;
+}
+
+.studies-list .study-item {
+  width: 100%;
+  text-align: left;
+}
+
+.course-list {
+  margin: 12px 0 0;
+  padding-inline-start: 20px;
+}
+
+.course-list li + li {
+  margin-block-start: 6px;
+}
+
+.independent-study {
+  margin: 12px 0 0;
+}
+
 .academic-panel[hidden] {
   display: none;
 }
