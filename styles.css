@@ -58,7 +58,8 @@ a {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+.inline-note:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 6px;
 }
@@ -188,6 +189,55 @@ main:focus {
   border: 1px solid var(--rule);
   border-radius: 10px;
   text-align: left;
+}
+
+.inline-note {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.inline-note-label {
+  text-decoration: underline dotted var(--muted);
+  text-underline-offset: 4px;
+}
+
+.inline-note-tooltip {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(100% + 8px);
+  left: 0;
+  width: max-content;
+  max-width: min(300px, calc(100vw - 48px));
+  padding: 8px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 4px 14px rgb(34 37 33 / 6%);
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.inline-note-tooltip::after {
+  position: absolute;
+  top: 100%;
+  inset-inline: 0;
+  height: 8px;
+  content: "";
+}
+
+.inline-note:hover .inline-note-tooltip,
+.inline-note:focus .inline-note-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.inline-note[data-dismissed] .inline-note-tooltip {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .cv-link {

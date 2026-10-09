@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light">
     <title>Borui Hu</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=14">
+    <link rel="stylesheet" href="styles.css?v=15">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -23,10 +23,36 @@
       <main class="home" id="main" tabindex="-1">
         <h1 class="home-name">Borui Hu</h1>
         <div class="profile">
-          <p class="profile-intro">I am a third-year undergraduate at the School of Mathematical Sciences, University of Science and Technology of China. I study pure mathematics, with a particular interest in partial differential equations.</p>
+          <p class="profile-intro">I am a third-year undergraduate at the School of Mathematical Sciences, University of Science and Technology of China. I study <span class="inline-note" tabindex="0" aria-describedby="pure-math-note"><span class="inline-note-label">pure mathematics</span><span class="inline-note-tooltip" id="pure-math-note" role="tooltip" lang="fr">Est-ce que c’est la fin de l’Histoire ?</span></span>, with a particular interest in partial differential equations.</p>
         </div>
         <p class="cv-link"><a href="CV_261003.pdf" lang="en">CV</a></p>
       </main>
     </div>
+    <script>
+      const note = document.querySelector(".inline-note");
+      const tooltip = document.querySelector(".inline-note-tooltip");
+
+      function positionNote() {
+        const bounds = note.getBoundingClientRect();
+        const width = tooltip.getBoundingClientRect().width;
+        const desiredLeft = bounds.left + bounds.width / 2 - width / 2;
+        const left = Math.max(16, Math.min(desiredLeft, document.documentElement.clientWidth - width - 16));
+        tooltip.style.left = `${left - bounds.left}px`;
+      }
+
+      function revealNote() {
+        note.removeAttribute("data-dismissed");
+        positionNote();
+      }
+
+      note.addEventListener("pointerenter", revealNote);
+      note.addEventListener("focus", revealNote);
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          note.setAttribute("data-dismissed", "true");
+        }
+      });
+      window.addEventListener("resize", positionNote);
+    </script>
   </body>
 </html>
