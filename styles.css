@@ -205,7 +205,7 @@ main:focus {
 .inline-note-tooltip {
   position: absolute;
   z-index: 2;
-  bottom: calc(100% + 8px);
+  bottom: calc(100% + 3px);
   left: 0;
   width: max-content;
   max-width: min(300px, calc(100vw - 48px));
@@ -225,7 +225,7 @@ main:focus {
   position: absolute;
   top: 100%;
   inset-inline: 0;
-  height: 8px;
+  height: 3px;
   content: "";
 }
 
