@@ -184,7 +184,6 @@ main:focus {
   padding: 20px 26px;
   border: 1px solid var(--rule);
   border-radius: 10px;
-  font-style: italic;
 }
 
 .profile {
