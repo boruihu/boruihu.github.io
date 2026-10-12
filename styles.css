@@ -178,7 +178,8 @@ main:focus {
 }
 
 .life-note {
-  max-width: 620px;
+  width: 500px;
+  max-width: 100%;
   margin: 24px auto 0;
   padding: 20px 26px;
   border: 1px solid var(--rule);
