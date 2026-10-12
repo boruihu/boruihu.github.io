@@ -177,6 +177,12 @@ main:focus {
   font-size: var(--size-heading);
 }
 
+.life-note {
+  max-width: 620px;
+  margin: 24px auto 0;
+  font-style: italic;
+}
+
 .profile {
   margin-block-start: 32px;
 }
