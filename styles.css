@@ -180,6 +180,9 @@ main:focus {
 .life-note {
   max-width: 620px;
   margin: 24px auto 0;
+  padding: 20px 26px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
   font-style: italic;
 }
 
@@ -379,6 +382,10 @@ main:focus {
   }
 
   .profile .profile-intro {
+    padding: 18px 22px;
+  }
+
+  .life-note {
     padding: 18px 22px;
   }
 
