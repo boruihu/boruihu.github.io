@@ -177,19 +177,6 @@ main:focus {
   font-size: var(--size-heading);
 }
 
-.life-photo {
-  width: 560px;
-  max-width: 100%;
-  margin: 32px auto 0;
-}
-
-.life-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
 .life-note {
   width: 420px;
   max-width: 100%;
