@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light">
     <title>Borui Hu</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20">
+    <link rel="stylesheet" href="styles.css?v=21">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -30,15 +30,6 @@
     </div>
     <script>
       const note = document.querySelector(".inline-note");
-      const tooltip = document.querySelector(".inline-note-tooltip");
-
-      function positionNote() {
-        const bounds = note.getBoundingClientRect();
-        const width = tooltip.getBoundingClientRect().width;
-        const desiredLeft = bounds.left + bounds.width / 2 - width / 2;
-        const left = Math.max(16, Math.min(desiredLeft, document.documentElement.clientWidth - width - 16));
-        tooltip.style.left = `${left - bounds.left}px`;
-      }
 
       function revealNote() {
         note.removeAttribute("data-dismissed");
@@ -52,7 +43,6 @@
           note.setAttribute("data-dismissed", "true");
         }
       });
-      window.addEventListener("resize", positionNote);
     </script>
   </body>
 </html>

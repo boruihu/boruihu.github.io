@@ -212,36 +212,26 @@ main:focus {
 }
 
 .inline-note-tooltip {
-  position: absolute;
+  position: fixed;
   z-index: 2;
-  bottom: calc(100% + 3px);
-  left: 0;
+  inset-inline-start: 50%;
+  bottom: 24px;
   width: max-content;
-  max-width: min(300px, calc(100vw - 48px));
-  padding: 8px 12px;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  background: var(--paper);
-  box-shadow: 0 4px 14px rgb(34 37 33 / 6%);
+  max-width: calc(100vw - 32px);
+  transform: translate(-50%, 8px);
   font-style: italic;
   line-height: 1.4;
   text-align: center;
   visibility: hidden;
   opacity: 0;
-}
-
-.inline-note-tooltip::after {
-  position: absolute;
-  top: 100%;
-  inset-inline: 0;
-  height: 3px;
-  content: "";
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
 }
 
 .inline-note:hover .inline-note-tooltip,
 .inline-note:focus .inline-note-tooltip {
   visibility: visible;
   opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .inline-note[data-dismissed] .inline-note-tooltip {
@@ -399,6 +389,10 @@ main:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .inline-note-tooltip {
+    transition: none;
+  }
+
   .study-item {
     transition: none;
   }
