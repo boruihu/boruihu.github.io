@@ -311,6 +311,13 @@ main:focus {
   margin-inline: auto;
 }
 
+.teaching-description {
+  width: 560px;
+  max-width: 100%;
+  margin: 28px auto 0;
+  text-align: left;
+}
+
 .course-term,
 .course-name {
   display: block;
