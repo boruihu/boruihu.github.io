@@ -283,7 +283,8 @@ main:focus {
   transform: translateY(-2px);
 }
 
-.study-item h2 {
+.study-item h2,
+.study-item h3 {
   margin: 0;
   font-size: var(--size-body);
   font-weight: 400;
@@ -331,6 +332,10 @@ main:focus {
 .studies-list {
   width: 420px;
   gap: 16px;
+}
+
+.previous-study-title {
+  margin-block-start: 64px;
 }
 
 .studies-list .study-item {
