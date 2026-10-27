@@ -413,6 +413,13 @@ main:focus {
   }
 }
 
+@media (max-width: 360px) {
+  .site-nav,
+  .academic-subnav {
+    width: calc(100% + 24px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .inline-note-tooltip {
     transition: none;
