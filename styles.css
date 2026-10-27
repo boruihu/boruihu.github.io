@@ -267,7 +267,8 @@ main:focus {
 }
 
 .research-list {
-  justify-items: center;
+  justify-items: stretch;
+  grid-auto-rows: 1fr;
 }
 
 .study-item {
@@ -279,6 +280,13 @@ main:focus {
   border-radius: 10px;
   background: transparent;
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.research-list .study-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .study-item:hover {
