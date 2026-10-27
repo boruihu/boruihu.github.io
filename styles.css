@@ -266,6 +266,10 @@ main:focus {
   margin: 36px auto 0;
 }
 
+.research-list {
+  justify-items: center;
+}
+
 .study-item {
   display: block;
   width: fit-content;
