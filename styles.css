@@ -347,7 +347,8 @@ main:focus {
   margin-block-start: 6px;
 }
 
-.independent-study {
+.independent-study,
+.course-note {
   margin: 12px 0 0;
 }
 
