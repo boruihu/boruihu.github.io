@@ -110,17 +110,28 @@
       const sectionButtons = document.querySelectorAll(".academic-subnav button");
       const sectionPanels = document.querySelectorAll(".academic-panel");
 
+      function activatePanel(panelId) {
+        sectionButtons.forEach((button) => {
+          const active = button.dataset.panel === panelId;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
+        sectionPanels.forEach((panel) => {
+          panel.hidden = panel.id !== panelId;
+        });
+      }
+
+      const requestedPanel = window.location.hash.slice(1);
+      const initialPanel = Array.from(sectionPanels).some((panel) => panel.id === requestedPanel)
+        ? requestedPanel
+        : "research-panel";
+      activatePanel(initialPanel);
+
       sectionButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const panelId = button.dataset.panel;
-          sectionButtons.forEach((item) => {
-            const active = item === button;
-            item.classList.toggle("is-active", active);
-            item.setAttribute("aria-pressed", String(active));
-          });
-          sectionPanels.forEach((panel) => {
-            panel.hidden = panel.id !== panelId;
-          });
+          history.replaceState(null, "", `#${panelId}`);
+          activatePanel(panelId);
         });
       });
     </script>
