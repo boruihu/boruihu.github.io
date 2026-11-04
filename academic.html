@@ -21,9 +21,9 @@
           <a href="miscellaneous.html">Miscellaneous</a>
         </nav>
         <nav class="academic-subnav" aria-label="Academic sections">
-          <button type="button" aria-pressed="false" aria-controls="student-panel" data-panel="student-panel">Studies</button>
+          <button type="button" class="is-active" aria-pressed="true" aria-controls="student-panel" data-panel="student-panel">Studies</button>
           <button type="button" aria-pressed="false" aria-controls="teaching-panel" data-panel="teaching-panel">Teaching</button>
-          <button type="button" class="is-active" aria-pressed="true" aria-controls="research-panel" data-panel="research-panel">Research</button>
+          <button type="button" aria-pressed="false" aria-controls="research-panel" data-panel="research-panel">Research</button>
         </nav>
       </header>
       <main class="page" id="main" tabindex="-1">
@@ -54,7 +54,7 @@
           </div>
           <p class="teaching-description">My responsibilities include grading half of the class’s homework assignments, leading two problem sessions, and grading quizzes and the final exam. In one of the sessions, I plan to discuss the action principle.</p>
         </section>
-        <section id="student-panel" class="academic-panel" aria-label="Studies" hidden>
+        <section id="student-panel" class="academic-panel" aria-label="Studies">
           <h1 class="page-title">Current Studies</h1>
           <div class="study-list studies-list">
             <section class="study-item" aria-labelledby="courses-title">
@@ -128,7 +128,7 @@
       const requestedPanel = window.location.hash.slice(1);
       const initialPanel = Array.from(sectionPanels).some((panel) => panel.id === requestedPanel)
         ? requestedPanel
-        : "research-panel";
+        : "student-panel";
       activatePanel(initialPanel);
 
       sectionButtons.forEach((button) => {
