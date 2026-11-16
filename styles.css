@@ -331,14 +331,6 @@ main:focus {
   text-align: left;
 }
 
-.research-description {
-  width: 440px;
-  max-width: 100%;
-  margin: 28px auto 0;
-  text-align: center;
-  text-wrap: balance;
-}
-
 .course-term,
 .course-name {
   display: block;
